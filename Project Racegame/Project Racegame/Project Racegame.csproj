@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Transform.cs" />
     <Compile Include="Collision.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

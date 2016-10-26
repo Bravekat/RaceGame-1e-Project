@@ -11,6 +11,8 @@ namespace Project_Racegame
     {
         public Transform carTransform = new Transform(250, 250);
         public bool up, right, left, down = false;
+        public float movespeed = 0.07f;
+        public float rotatespeed = 30;
 
         public void KeyPress(KeyEventArgs e)
         {

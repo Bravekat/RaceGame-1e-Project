@@ -13,10 +13,7 @@ namespace Project_Racegame
     public partial class Form1 : System.Windows.Forms.Form
     {
         Bitmap Backbuffer;
-
         Car car = new Car();
-        float movespeed = 0.07f;
-        int rotatespeed = 30;
 
         public Form1()
         {
@@ -36,26 +33,26 @@ namespace Project_Racegame
             label4.Text = "Y rotation: " + car.carTransform.rotation.rotY;
             if (car.up == true)
             {
-                car.carTransform.Move(movespeed);
+                car.carTransform.Move(car.movespeed);
                 if (car.right == true)
                 {
-                    car.carTransform.Move(movespeed, rotatespeed);
+                    car.carTransform.Move(car.movespeed, car.rotatespeed);
                 }
                 if (car.left == true)
                 {
-                    car.carTransform.Move(movespeed, -rotatespeed);
+                    car.carTransform.Move(car.movespeed, -car.rotatespeed);
                 }
             }
             if(car.down == true)
             {
-                car.carTransform.Move(-movespeed);
+                car.carTransform.Move(-car.movespeed);
                 if (car.right == true)
                 {
-                    car.carTransform.Move(-movespeed, -rotatespeed);
+                    car.carTransform.Move(-car.movespeed, -car.rotatespeed);
                 }
                 if (car.left == true)
                 {
-                    car.carTransform.Move(-movespeed, rotatespeed);
+                    car.carTransform.Move(-car.movespeed, car.rotatespeed);
                 }
             }
             Invalidate();

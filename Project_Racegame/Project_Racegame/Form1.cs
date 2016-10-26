@@ -12,7 +12,7 @@ namespace Project_Racegame
 {
     public partial class Form1 : System.Windows.Forms.Form
     {
-        Transform car1 = new Transform(250, 250);
+        Car car = new Car();
 
         public Form1()
         {
@@ -21,7 +21,7 @@ namespace Project_Racegame
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.FillRectangle(Brushes.Red, car1.position.posX, car1.position.posY, 10, 10);
+            e.Graphics.FillRectangle(Brushes.Red, car.carTransform.position.posX, car.carTransform.position.posY, 10, 10);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace Project_Racegame
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-
+            car.KeyPress(e);
         }
     }
 }

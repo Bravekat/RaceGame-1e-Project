@@ -38,6 +38,9 @@ namespace Project_Racegame
             rotation.rotX = (float)cos * (180 / (float)Math.PI);
             rotation.rotY = (float)sin * (180 / (float)Math.PI);
             rotation.Angle = rotation.Angle + speedRotate;
+            position.posX += rotation.rotX;
+            position.posY += rotation.rotY;
+
         }
     }
 

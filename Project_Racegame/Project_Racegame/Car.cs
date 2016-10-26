@@ -10,8 +10,8 @@ namespace Project_Racegame
     class Car
     {
         public Transform carTransform = new Transform(250, 250);
-        int movespeed = 10;
-        int speedrotate = 1;
+        float movespeed = 0.07f;
+        int speedrotate = 10;
 
         public void KeyPress(KeyEventArgs e)
         {

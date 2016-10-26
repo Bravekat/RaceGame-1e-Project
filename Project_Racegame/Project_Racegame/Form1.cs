@@ -26,6 +26,10 @@ namespace Project_Racegame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            label1.Text = "X position: " + car.carTransform.position.posX;
+            label2.Text = "Y position: " + car.carTransform.position.posY;
+            label3.Text = "X rotation: " + car.carTransform.rotation.rotX;
+            label4.Text = "Y rotation: " + car.carTransform.rotation.rotY;
             Invalidate();
         }
 

@@ -12,6 +12,8 @@ namespace Project_Racegame
 {
     public partial class Form1 : System.Windows.Forms.Form
     {
+        Bitmap Backbuffer;
+
         Car car = new Car();
         float movespeed = 0.07f;
         int rotatespeed = 30;

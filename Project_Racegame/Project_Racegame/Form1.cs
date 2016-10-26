@@ -13,7 +13,7 @@ namespace Project_Racegame
     public partial class Form1 : System.Windows.Forms.Form
     {
         Car car = new Car();
-        float movespeed = 0.01f;
+        float movespeed = 0.07f;
         int rotatespeed = 30;
 
         public Form1()

@@ -32,12 +32,12 @@ namespace Project_Racegame
 
         public void Move(float speedMove, float speedRotate)
         {
-            double radians = (Math.PI / 180) * (rotation.Angle + speedRotate);
+            double radians = (Math.PI / 180) * (rotation.angle + speedRotate);
             double cos = Math.Cos(radians) * speedMove;
             double sin = Math.Sin(radians) * speedMove;
             rotation.rotX = (float)cos * (180 / (float)Math.PI);
             rotation.rotY = (float)sin * (180 / (float)Math.PI);
-            rotation.Angle = rotation.Angle + speedRotate;
+            rotation.angle = rotation.angle + speedRotate;
             position.posX += rotation.rotX;
             position.posY += rotation.rotY;
 
@@ -46,27 +46,13 @@ namespace Project_Racegame
 
     public class Rotation
     {
-        private float angle;
-        public float Angle
-        {
-            get
-            {
-                return angle;
-            }
-            set
-            {
-                if (value > 360)
-                    angle = value - 360;
-                if (value < 1)
-                    angle = value + 360;
-            }
-        }
+        public float angle;
         public float rotX;
         public float rotY;
 
         public Rotation()
         {
-            Angle = 360;
+            angle = 360;
             rotX = 0;
             rotY = 0;
         }

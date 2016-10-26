@@ -13,6 +13,8 @@ namespace Project_Racegame
     public partial class Form1 : System.Windows.Forms.Form
     {
         Car car = new Car();
+        float movespeed = 0.01f;
+        int rotatespeed = 30;
 
         public Form1()
         {
@@ -30,12 +32,41 @@ namespace Project_Racegame
             label2.Text = "Y position: " + car.carTransform.position.posY;
             label3.Text = "X rotation: " + car.carTransform.rotation.rotX;
             label4.Text = "Y rotation: " + car.carTransform.rotation.rotY;
+            if (car.up == true)
+            {
+                car.carTransform.Move(movespeed);
+                if (car.right == true)
+                {
+                    car.carTransform.Move(movespeed, rotatespeed);
+                }
+                if (car.left == true)
+                {
+                    car.carTransform.Move(movespeed, -rotatespeed);
+                }
+            }
+            if(car.down == true)
+            {
+                car.carTransform.Move(-movespeed);
+                if (car.right == true)
+                {
+                    car.carTransform.Move(-movespeed, -rotatespeed);
+                }
+                if (car.left == true)
+                {
+                    car.carTransform.Move(-movespeed, rotatespeed);
+                }
+            }
             Invalidate();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             car.KeyPress(e);
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            car.KeyRelease(e);
         }
     }
 }

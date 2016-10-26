@@ -10,34 +10,45 @@ namespace Project_Racegame
     class Car
     {
         public Transform carTransform = new Transform(250, 250);
-        float movespeed = 0.07f;
-        int speedrotate = 10;
+        public bool up, right, left, down = false;
 
         public void KeyPress(KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
-                carTransform.Move(movespeed);
-                if (e.KeyCode == Keys.Right)
-                {
-                    carTransform.Move(movespeed, speedrotate);
-                }
-                if (e.KeyCode == Keys.Left)
-                {
-                    carTransform.Move(movespeed, -speedrotate);
-                }
+                up = true;
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                right = true;
+            }
+            if (e.KeyCode == Keys.Left)
+            {
+                left = true;
             }
             if (e.KeyCode == Keys.Down)
             {
-                carTransform.Move(-movespeed);
-                if (e.KeyCode == Keys.Right)
-                {
-                    carTransform.Move(-movespeed, -speedrotate);
-                }
-                if (e.KeyCode == Keys.Left)
-                {
-                    carTransform.Move(-movespeed, speedrotate);
-                }
+                down = true;
+            }
+        }
+
+        public void KeyRelease(KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                up = false;
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                right = false;
+            }
+            if (e.KeyCode == Keys.Left)
+            {
+                left = false;
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                down = false;
             }
         }
     }

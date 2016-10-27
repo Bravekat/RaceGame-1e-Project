@@ -7,11 +7,8 @@ using System.Windows.Forms;
 
 namespace Project_Racegame
 {
-    public delegate void CarUpdate(EventArgs e);
-    //
     class Car
     {
-        public event CarUpdate carUpdate;
         public Transform carTransform = new Transform(250, 250);
         public bool up, right, left, down = false;
         public float movespeedup = 0.02f;
@@ -23,37 +20,7 @@ namespace Project_Racegame
 
         public Car()
         {
-            carUpdate += new CarUpdate(Update);
-        }
-
-        public void Update(EventArgs e)
-        {
-            if (up == true)
-            {
-                carTransform.Move(movespeedforward);
-                speed = movespeedforward;
-                if (right == true)
-                {
-                    carTransform.Move(movespeedup, rotatespeed);
-                }
-                if (left == true)
-                {
-                    carTransform.Move(movespeedup, -rotatespeed);
-                }
-            }
-            if (down == true)
-            {
-                carTransform.Move(-movespeedbackward);
-                speed = movespeedbackward;
-                if (right == true)
-                {
-                    carTransform.Move(-movespeeddown, -rotatespeed);
-                }
-                if (left == true)
-                {
-                    carTransform.Move(-movespeeddown, rotatespeed);
-                }
-            }
+            
         }
 
         public void Modifyspeed (float movespeedup1, float movespeeddown1, float movespeedforward1, float movespeedbackward1, float speed1)

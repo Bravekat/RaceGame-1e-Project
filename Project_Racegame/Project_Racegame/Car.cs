@@ -13,11 +13,20 @@ namespace Project_Racegame
         public bool up, right, left, down = false;
         public float movespeedup = 0.02f;
         public float movespeeddown = 0.01f;
-        public float rotatespeed = 30;
         public float movespeedforward = 0.1f;
         public float movespeedbackward = 0.05f;
         public float speed = 0f;
+        public float rotatespeed = 20;
 
+        public void Modifyspeed (float movespeedup1, float movespeeddown1, float movespeedforward1, float movespeedbackward1, float speed1)
+        {
+            movespeedup = movespeedup1;
+            movespeeddown = movespeeddown1;
+            movespeedforward = movespeedforward1;
+            movespeedbackward = movespeedbackward1;
+            speed = speed1;
+        }
+        
         public void KeyPress(KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)

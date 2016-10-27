@@ -31,31 +31,46 @@ namespace Project_Racegame
             label2.Text = "Y position: " + car.carTransform.position.posY;
             label3.Text = "X rotation: " + car.carTransform.rotation.rotX;
             label4.Text = "Y rotation: " + car.carTransform.rotation.rotY;
+            label5.Text = "speed: " + car.speed;
             if (car.up == true)
             {
-                car.carTransform.Move(car.movespeed);
+                car.carTransform.Move(car.movespeedforward);
+                car.speed = car.movespeedforward;
                 if (car.right == true)
                 {
-                    car.carTransform.Move(car.movespeed, car.rotatespeed);
+                    car.carTransform.Move(car.movespeedup, car.rotatespeed);
                 }
                 if (car.left == true)
                 {
-                    car.carTransform.Move(car.movespeed, -car.rotatespeed);
+                    car.carTransform.Move(car.movespeedup, -car.rotatespeed);
                 }
             }
             if(car.down == true)
             {
-                car.carTransform.Move(-car.movespeed);
+                car.carTransform.Move(-car.movespeedbackward);
+                car.speed = car.movespeedbackward;
                 if (car.right == true)
                 {
-                    car.carTransform.Move(-car.movespeed, -car.rotatespeed);
+                    car.carTransform.Move(-car.movespeeddown, -car.rotatespeed);
                 }
                 if (car.left == true)
                 {
-                    car.carTransform.Move(-car.movespeed, car.rotatespeed);
+                    car.carTransform.Move(-car.movespeeddown, car.rotatespeed);
                 }
             }
-            Invalidate();
+            if (car.down == false && car.up == false)
+            {
+                car.speed = 0;
+            }
+            if (car.speed == car.movespeedforward)
+            {
+                car.speed = 3;
+            }
+            if (car.speed == car.movespeedbackward)
+            {
+                car.speed = 2;
+            }
+                Invalidate();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)

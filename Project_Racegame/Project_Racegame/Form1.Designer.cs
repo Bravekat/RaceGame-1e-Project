@@ -27,7 +27,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {
+        {//
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();

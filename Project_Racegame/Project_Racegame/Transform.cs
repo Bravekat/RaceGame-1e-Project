@@ -29,7 +29,7 @@ namespace Project_Racegame
         {
             Move(speedMove, 0);
         }
-
+        //
         public void Move(float speedMove, float speedRotate)
         {
             double radians = (Math.PI / 180) * (rotation.angle + speedRotate);

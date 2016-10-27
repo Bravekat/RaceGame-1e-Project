@@ -33,7 +33,7 @@ namespace Project_Racegame
             label4.Text = "Y rotation: " + car.carTransform.rotation.rotY;
             label5.Text = "speed: " + car.speed;
             /*if (car.up == true)
-            {
+            {//
                 car.carTransform.Move(car.movespeedforward);
                 car.speed = car.movespeedforward;
                 if (car.right == true)

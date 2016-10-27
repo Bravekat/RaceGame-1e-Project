@@ -21,16 +21,6 @@ namespace Project_Racegame
         public float speed = 0f;
         public float rotatespeed = 20;
 
-        public Car()
-        {
-            carUpdate += new CarUpdate(Update);
-        }
-
-        public void Update(EventArgs e)
-        {
-
-        }
-
         public void Modifyspeed (float movespeedup1, float movespeeddown1, float movespeedforward1, float movespeedbackward1, float speed1)
         {
             movespeedup = movespeedup1;

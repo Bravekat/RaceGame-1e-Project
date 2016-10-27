@@ -116,7 +116,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

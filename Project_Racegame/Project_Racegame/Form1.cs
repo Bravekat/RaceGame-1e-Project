@@ -32,8 +32,8 @@ namespace Project_Racegame
             label3.Text = "X rotation: " + car.carTransform.rotation.rotX;
             label4.Text = "Y rotation: " + car.carTransform.rotation.rotY;
             label5.Text = "speed: " + car.speed;
-            /*if (car.up == true)
-            {//
+            if (car.up == true)
+            {
                 car.carTransform.Move(car.movespeedforward);
                 car.speed = car.movespeedforward;
                 if (car.right == true)
@@ -57,7 +57,7 @@ namespace Project_Racegame
                 {
                     car.carTransform.Move(-car.movespeeddown, car.rotatespeed);
                 }
-            }*/
+            }
             Invalidate();
 
             if (car.down == false && car.up == false)

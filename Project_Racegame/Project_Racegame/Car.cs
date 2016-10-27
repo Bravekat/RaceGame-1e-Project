@@ -28,7 +28,32 @@ namespace Project_Racegame
 
         public void Update(EventArgs e)
         {
-
+            if (up == true)
+            {
+                carTransform.Move(movespeedforward);
+                speed = movespeedforward;
+                if (right == true)
+                {
+                    carTransform.Move(movespeedup, rotatespeed);
+                }
+                if (left == true)
+                {
+                    carTransform.Move(movespeedup, -rotatespeed);
+                }
+            }
+            if (down == true)
+            {
+                carTransform.Move(-movespeedbackward);
+                speed = movespeedbackward;
+                if (right == true)
+                {
+                    carTransform.Move(-movespeeddown, -rotatespeed);
+                }
+                if (left == true)
+                {
+                    carTransform.Move(-movespeeddown, rotatespeed);
+                }
+            }
         }
 
         public void Modifyspeed (float movespeedup1, float movespeeddown1, float movespeedforward1, float movespeedbackward1, float speed1)

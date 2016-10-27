@@ -17,10 +17,11 @@ namespace Project_Racegame
         public float movespeedbackward = 0.05f;
         public float speed = 0f;
         public float rotatespeed = 20;
+        public int player;
 
-        public Car()
+        public Car(int newPlayer)
         {
-            
+            player = newPlayer;
         }
 
         public void Modifyspeed (float movespeedup1, float movespeeddown1, float movespeedforward1, float movespeedbackward1, float speed1)
@@ -31,44 +32,90 @@ namespace Project_Racegame
             movespeedbackward = movespeedbackward1;
             speed = speed1;
         }
-        
+
         public void KeyPress(KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Up)
+            if (player == 1)
             {
-                up = true;
+                if (e.KeyCode == Keys.Up)
+                {
+                    up = true;
+                }
+                if (e.KeyCode == Keys.Right)
+                {
+                    right = true;
+                }
+                if (e.KeyCode == Keys.Left)
+                {
+                    left = true;
+                }
+                if (e.KeyCode == Keys.Down)
+                {
+                    down = true;
+                }
             }
-            if (e.KeyCode == Keys.Right)
+
+            if (player == 2)
             {
-                right = true;
-            }
-            if (e.KeyCode == Keys.Left)
-            {
-                left = true;
-            }
-            if (e.KeyCode == Keys.Down)
-            {
-                down = true;
+                if (e.KeyCode == Keys.W)
+                {
+                    up = true;
+                }
+                if (e.KeyCode == Keys.D)
+                {
+                    right = true;
+                }
+                if (e.KeyCode == Keys.A)
+                {
+                    left = true;
+                }
+                if (e.KeyCode == Keys.S)
+                {
+                    down = true;
+                }
             }
         }
 
         public void KeyRelease(KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Up)
+            if (player == 1)
             {
-                up = false;
+                if (e.KeyCode == Keys.Up)
+                {
+                    up = false;
+                }
+                if (e.KeyCode == Keys.Right)
+                {
+                    right = false;
+                }
+                if (e.KeyCode == Keys.Left)
+                {
+                    left = false;
+                }
+                if (e.KeyCode == Keys.Down)
+                {
+                    down = false;
+                }
             }
-            if (e.KeyCode == Keys.Right)
+
+            if (player == 2)
             {
-                right = false;
-            }
-            if (e.KeyCode == Keys.Left)
-            {
-                left = false;
-            }
-            if (e.KeyCode == Keys.Down)
-            {
-                down = false;
+                if (e.KeyCode == Keys.W)
+                {
+                    up = false;
+                }
+                if (e.KeyCode == Keys.D)
+                {
+                    right = false;
+                }
+                if (e.KeyCode == Keys.A)
+                {
+                    left = false;
+                }
+                if (e.KeyCode == Keys.S)
+                {
+                    down = false;
+                }
             }
         }
     }

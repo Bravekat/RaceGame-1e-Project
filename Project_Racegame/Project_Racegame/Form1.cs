@@ -13,7 +13,8 @@ namespace Project_Racegame
     public partial class Form1 : System.Windows.Forms.Form
     {
         Bitmap Backbuffer;
-        Car car = new Car();
+        Car car1 = new Car(1);
+        Car car2 = new Car(2);
 
         public Form1()
         {
@@ -22,66 +23,104 @@ namespace Project_Racegame
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.FillRectangle(Brushes.Red, car.carTransform.position.posX, car.carTransform.position.posY, 10, 10);
+            e.Graphics.FillRectangle(Brushes.Red, car1.carTransform.position.posX, car1.carTransform.position.posY, 10, 10);
+            e.Graphics.FillRectangle(Brushes.Red, car2.carTransform.position.posX, car2.carTransform.position.posY, 10, 10);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label1.Text = "X position: " + car.carTransform.position.posX;
-            label2.Text = "Y position: " + car.carTransform.position.posY;
-            label3.Text = "X rotation: " + car.carTransform.rotation.rotX;
-            label4.Text = "Y rotation: " + car.carTransform.rotation.rotY;
-            label5.Text = "speed: " + car.speed;
-            if (car.up == true)
+            if (car1.up == true)
             {
-                car.carTransform.Move(car.movespeedforward);
-                car.speed = car.movespeedforward;
-                if (car.right == true)
+                car1.carTransform.Move(car1.movespeedforward);
+                car1.speed = car1.movespeedforward;
+                if (car1.right == true)
                 {
-                    car.carTransform.Move(car.movespeedup, car.rotatespeed);
+                    car1.carTransform.Move(car1.movespeedup, car1.rotatespeed);
                 }
-                if (car.left == true)
+                if (car1.left == true)
                 {
-                    car.carTransform.Move(car.movespeedup, -car.rotatespeed);
+                    car1.carTransform.Move(car1.movespeedup, -car1.rotatespeed);
                 }
             }
-            if(car.down == true)
+            if(car1.down == true)
             {
-                car.carTransform.Move(-car.movespeedbackward);
-                car.speed = car.movespeedbackward;
-                if (car.right == true)
+                car1.carTransform.Move(-car1.movespeedbackward);
+                car1.speed = car1.movespeedbackward;
+                if (car1.right == true)
                 {
-                    car.carTransform.Move(-car.movespeeddown, -car.rotatespeed);
+                    car1.carTransform.Move(-car1.movespeeddown, -car1.rotatespeed);
                 }
-                if (car.left == true)
+                if (car1.left == true)
                 {
-                    car.carTransform.Move(-car.movespeeddown, car.rotatespeed);
+                    car1.carTransform.Move(-car1.movespeeddown, car1.rotatespeed);
+                }
+            }
+
+            if (car2.up == true)
+            {
+                car2.carTransform.Move(car2.movespeedforward);
+                car2.speed = car2.movespeedforward;
+                if (car2.right == true)
+                {
+                    car2.carTransform.Move(car2.movespeedup, car2.rotatespeed);
+                }
+                if (car2.left == true)
+                {
+                    car2.carTransform.Move(car2.movespeedup, -car2.rotatespeed);
+                }
+            }
+            if (car2.down == true)
+            {
+                car2.carTransform.Move(-car2.movespeedbackward);
+                car2.speed = car2.movespeedbackward;
+                if (car2.right == true)
+                {
+                    car2.carTransform.Move(-car2.movespeeddown, -car2.rotatespeed);
+                }
+                if (car2.left == true)
+                {
+                    car2.carTransform.Move(-car2.movespeeddown, car2.rotatespeed);
                 }
             }
             Invalidate();
 
-            if (car.down == false && car.up == false)
+            if (car1.down == false && car1.up == false)
             {
-                car.speed = 0;
+                car1.speed = 0;
             }
-            if (car.speed == car.movespeedforward)
+            if (car1.speed == car1.movespeedforward)
             {
-                car.speed = 3;
+                car1.speed = 3;
             }
-            if (car.speed == car.movespeedbackward)
+            if (car1.speed == car1.movespeedbackward)
             {
-                car.speed = 2;
+                car1.speed = 2;
+            }
+
+            if (car2.down == false && car2.up == false)
+            {
+                car2.speed = 0;
+            }
+            if (car2.speed == car2.movespeedforward)
+            {
+                car2.speed = 3;
+            }
+            if (car2.speed == car2.movespeedbackward)
+            {
+                car2.speed = 2;
             }
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            car.KeyPress(e);
+            car1.KeyPress(e);
+            car2.KeyPress(e);
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            car.KeyRelease(e);
+            car1.KeyRelease(e);
+            car2.KeyRelease(e);
         }
     }
 }

@@ -13,8 +13,8 @@ namespace Project_Racegame
     public partial class Form1 : System.Windows.Forms.Form
     {
         Bitmap Backbuffer;
-        Car car1 = new Car(1);
-        Car car2 = new Car(2);
+        Car car1 = new Car(1, 30, 500);
+        Car car2 = new Car(2, 70, 500);
 
         public Form1()
         {
@@ -29,6 +29,8 @@ namespace Project_Racegame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            this.label1.Text = "ENGERGIE p1: " + Math.Round(car1.engergie) + "%";
+            this.label2.Text = "ENGERGIE p2: " + Math.Round(car2.engergie) + "%";
             if (car1.up == true)
             {
                 car1.carTransform.Move(car1.movespeedforward);
@@ -91,10 +93,12 @@ namespace Project_Racegame
             if (car1.speed == car1.movespeedforward)
             {
                 car1.speed = 3;
+                car1.engergie = car1.engergie - 0.2f;
             }
             if (car1.speed == car1.movespeedbackward)
             {
                 car1.speed = 2;
+                car1.engergie = car1.engergie - 0.1f;
             }
 
             if (car2.down == false && car2.up == false)
@@ -104,10 +108,30 @@ namespace Project_Racegame
             if (car2.speed == car2.movespeedforward)
             {
                 car2.speed = 3;
+                car2.engergie = car2.engergie - 0.2f;
             }
             if (car2.speed == car2.movespeedbackward)
             {
                 car2.speed = 2;
+                car2.engergie = car2.engergie - 0.1f;
+            }
+
+            if(car1.engergie <= 1)
+            {
+                car1.engergie = 0;
+                car1.movespeedup = 0.01f;
+                car1.movespeeddown = 0.005f;
+                car1.movespeedforward = 0.05f;
+                car1.movespeedbackward = 0.025f;
+            }//
+            if (car2.engergie <= 1)
+            {
+                car2.engergie = 0;
+                car2.engergie = 0;
+                car2.movespeedup = 0.01f;
+                car2.movespeeddown = 0.005f;
+                car2.movespeedforward = 0.05f;
+                car2.movespeedbackward = 0.025f;
             }
         }
 

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Project_Racegame
 {
-    class Car
+    public class Car
     {
         public Transform carTransform;
         public bool up, right, left, down = false;
@@ -17,6 +17,7 @@ namespace Project_Racegame
         public float movespeedbackward = 0.05f;
         public float speed = 0f;
         public float rotatespeed = 20;
+        public float engergie = 100;
         public int player;
 
         public Car(int newPlayer)

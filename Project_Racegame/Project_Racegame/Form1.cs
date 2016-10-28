@@ -149,7 +149,7 @@ namespace Project_Racegame
             }
             case "car botst tegen rand":
             {
-                  //hetzelfde voor car2
+                //hetzelfde voor car2
                 break;
             }*/
         }

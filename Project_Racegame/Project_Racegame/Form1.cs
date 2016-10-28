@@ -127,12 +127,31 @@ namespace Project_Racegame
             if (car2.engergie <= 1)
             {
                 car2.engergie = 0;
-                car2.engergie = 0;
                 car2.movespeedup = 0.01f;
                 car2.movespeeddown = 0.005f;
                 car2.movespeedforward = 0.05f;
                 car2.movespeedbackward = 0.025f;
             }
+
+            /*dit moet in de cases komen van de colormapping ding.
+            case "car naast de baan, dus in gras ofiets dergelijks":
+            {
+                car1.movespeedup = 0.01f;
+                car1.movespeeddown = 0.005f;
+                car1.movespeedforward = 0.05f;
+                car1.movespeedbackward = 0.025f;  //hetzelfde voor car2
+                break;
+            }
+            case "car op pitstop":
+            {
+                car1.engergie = 100;   //hetzelfde voor car2
+                break;
+            }
+            case "car ":
+            {
+                  //hetzelfde voor car2
+                break;
+            }*/
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)

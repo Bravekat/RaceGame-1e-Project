@@ -72,7 +72,7 @@ namespace Project_Racegame
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.BackgroundImage = Image.FromFile(Path.Combine(Environment.CurrentDirectory, "Ztracks1.png"));
+            this.BackgroundImage = Properties.Resources.Ztracks1;
             this.ClientSize = new System.Drawing.Size(1042, 768);
             this.MaximumSize = new System.Drawing.Size(1042, 768);
             this.MinimumSize = new System.Drawing.Size(1042, 768);

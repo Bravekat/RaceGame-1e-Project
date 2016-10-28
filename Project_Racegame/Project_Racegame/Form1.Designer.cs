@@ -67,7 +67,7 @@ namespace Project_Racegame
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             // 
-            // Form1
+            // Form1//
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label2);

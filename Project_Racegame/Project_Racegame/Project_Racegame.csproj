@@ -87,6 +87,18 @@
   <ItemGroup>
     <None Include="Resources\Ztracks1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Moet Naar Bin-Debug\Ztracks\Ztracks1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Moet Naar Bin-Debug\Ztracks\Ztracks1_colormap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Moet Naar Bin-Debug\Zombie Players\Zombie.1.0 animation.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

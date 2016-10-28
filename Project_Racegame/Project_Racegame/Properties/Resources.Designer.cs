@@ -63,9 +63,29 @@ namespace Project_Racegame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Zombie_1_0_animation {
+            get {
+                object obj = ResourceManager.GetObject("Zombie_1_0_animation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ztracks1 {
             get {
                 object obj = ResourceManager.GetObject("Ztracks1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ztracks1_colormap {
+            get {
+                object obj = ResourceManager.GetObject("Ztracks1_colormap", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

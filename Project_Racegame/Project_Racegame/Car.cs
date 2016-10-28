@@ -9,7 +9,7 @@ namespace Project_Racegame
 {
     class Car
     {
-        public Transform carTransform = new Transform(250, 250);
+        public Transform carTransform;
         public bool up, right, left, down = false;
         public float movespeedup = 0.02f;
         public float movespeeddown = 0.01f;
@@ -22,6 +22,13 @@ namespace Project_Racegame
         public Car(int newPlayer)
         {
             player = newPlayer;
+            carTransform = new Transform(0, 0);
+        }
+
+        public Car(int newPlayer, float xPos, float yPos)
+        {
+            player = newPlayer;
+            carTransform = new Transform(xPos, yPos);
         }
 
         public void Modifyspeed (float movespeedup1, float movespeeddown1, float movespeedforward1, float movespeedbackward1, float speed1)

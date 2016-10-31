@@ -144,7 +144,12 @@ namespace Project_Racegame
             }
             case "car op pitstop":
             {
-                car1.energie = 100;   //hetzelfde voor car2
+                if(car1.engergie<50)
+                {
+                    car1.energie = 100;
+                    car1.aantalpitstops = car1.aantalpitstops + 1;
+                }
+                //hetzelfde voor car2
                 break;
             }
             case "car botst tegen rand":

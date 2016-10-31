@@ -21,16 +21,28 @@ namespace Project_Racegame
         public float engergie = 100;
         public int player;
 
-        public Car(int newPlayer)
+        public Car(int newPlayer, Bitmap image)
         {
             player = newPlayer;
-            carTransform = new Transform(0, 0);
+            carTransform = new Transform(0, 0, image);
         }
 
-        public Car(int newPlayer, float xPos, float yPos)
+        public Car(int newPlayer, int height, int width)
         {
             player = newPlayer;
-            carTransform = new Transform(xPos, yPos);
+            carTransform = new Transform(0, 0, new Point(height, width));
+        }
+
+        public Car(int newPlayer, float xPos, float yPos, Bitmap image)
+        {
+            player = newPlayer;
+            carTransform = new Transform(xPos, yPos, image);
+        }
+
+        public Car(int newPlayer, float xPos, float yPos, int height, int width)
+        {
+            player = newPlayer;
+            carTransform = new Transform(xPos, yPos, new Point(height, width));
         }
 
         public void Modifyspeed (float movespeedup1, float movespeeddown1, float movespeedforward1, float movespeedbackward1, float speed1)
@@ -42,10 +54,10 @@ namespace Project_Racegame
             speed = speed1;
         }
 
-        public void ColorCollision(Bitmap colorMap, Label label)
+        public void ColorCollision(Bitmap colorMap)
         {
-            Color pixel = colorMap.GetPixel((int)Math.Round(carTransform.position.posX), (int)Math.Round(carTransform.position.posY));
-            label.Text = "" + pixel.ToArgb();
+            Point anchor = new Point((int)carTransform.position.posX + ((int)carTransform.size.width / 2), (int)carTransform.position.posY + ((int)carTransform.size.height / 2));
+            Color pixel = colorMap.GetPixel(anchor.X, anchor.Y);
 
             if (pixel.ToArgb() != -1)
             {

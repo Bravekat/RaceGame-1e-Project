@@ -14,14 +14,18 @@ namespace Project_Racegame
     {
         Bitmap Backbuffer;
         Bitmap colorMap;
-        Car car1 = new Car(1, 30, 500);
-        Car car2 = new Car(2, 70, 500);
+        Bitmap player1 = Properties.Resources.Zombie_1_0_animation;
+        Bitmap player2 = Properties.Resources.Zombie_1_0_animation;
+        Car car1;
+        Car car2;
 
         public Form1()
         {
             InitializeComponent();
             BackgroundImage = Properties.Resources.Ztracks1_colormap;
             colorMap = Properties.Resources.Ztracks1_colormap;
+            car1 = new Car(1, 30, 500, 10, 10);
+            car2 = new Car(2, 70, 500, 10, 10);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -32,8 +36,7 @@ namespace Project_Racegame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            car1.ColorCollision(colorMap, label3);
-            //car2.ColorCollision(colorMap, label3);
+            car1.ColorCollision(colorMap);
 
             this.label1.Text = "ENGERGIE p1: " + Math.Round(car1.engergie) + "%";
             this.label2.Text = "ENGERGIE p2: " + Math.Round(car2.engergie) + "%";

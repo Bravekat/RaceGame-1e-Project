@@ -13,12 +13,15 @@ namespace Project_Racegame
     public partial class Form1 : System.Windows.Forms.Form
     {
         Bitmap Backbuffer;
+        Bitmap colorMap;
         Car car1 = new Car(1, 30, 500);
         Car car2 = new Car(2, 70, 500);
 
         public Form1()
         {
             InitializeComponent();
+            BackgroundImage = Properties.Resources.Ztracks1_colormap;
+            colorMap = Properties.Resources.Ztracks1_colormap;
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -29,6 +32,9 @@ namespace Project_Racegame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            car1.ColorCollision(colorMap, label3);
+            //car2.ColorCollision(colorMap, label3);
+
             this.label1.Text = "ENGERGIE p1: " + Math.Round(car1.engergie) + "%";
             this.label2.Text = "ENGERGIE p2: " + Math.Round(car2.engergie) + "%";
             if (car1.up == true)

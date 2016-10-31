@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,6 +40,17 @@ namespace Project_Racegame
             movespeedforward = movespeedforward1;
             movespeedbackward = movespeedbackward1;
             speed = speed1;
+        }
+
+        public void ColorCollision(Bitmap colorMap, Label label)
+        {
+            Color pixel = colorMap.GetPixel((int)Math.Round(carTransform.position.posX), (int)Math.Round(carTransform.position.posY));
+            label.Text = "" + pixel.ToArgb();
+
+            if (pixel.ToArgb() != -1)
+            {
+                carTransform.Move(-0.1f);
+            }
         }
 
         public void KeyPress(KeyEventArgs e)

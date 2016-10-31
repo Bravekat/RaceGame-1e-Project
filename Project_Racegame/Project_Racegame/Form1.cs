@@ -151,6 +151,38 @@ namespace Project_Racegame
             {
                 //hetzelfde voor car2
                 break;
+            }
+            case "car raakt chekpoint1":
+            {
+                car1.chekpoint 1 == true; //hetzelfde voor car2
+                break;
+            }
+            case "car raakt chekpoint2":
+            {
+                if (car1.checkpoint1==true)
+                {
+                    car1.chekpoint 2 = true;
+                }//hetzelfde voor car2
+                break;
+            }
+            case "car raakt chekpoint3":
+            {
+                if (car1.checkpoint1==true && car1.checkpoint2===true)
+                {
+                    car1.chekpoint 3 = true;
+                }//hetzelfde voor car2
+                break;
+            }
+            case "car raakt finish":
+            {
+                if (car1.checkpoint1==true && car1.checkpoint2==true && car1.checkpoint2==true)
+                {
+                    car1.ronde = car1.ronde + 1;
+                    car1.checkpoint1==false;
+                    car1.checkpoint2==false;
+                    car1.checkpoint2==false;
+                }//hetzelfde voor car2
+                break;
             }*/
         }
 

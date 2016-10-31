@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Project_Racegame
 {
     public class Transform
-    {
+    {        
         public Position position = new Position();
         public Rotation rotation = new Rotation();
 
@@ -29,7 +29,7 @@ namespace Project_Racegame
         {
             Move(speedMove, 0);
         }
-        
+
         public void Move(float speedMove, float speedRotate)
         {
             double radians = (Math.PI / 180) * (rotation.angle + speedRotate);
@@ -81,4 +81,16 @@ namespace Project_Racegame
             posY = yPos;
         }
     }
+  /*  public Cirkel(float circlex, float circley)
+        {
+        yvar circle1 = { radius: 20, x: 5, y: 5 };
+         xvar circle2 = { radius: 12, x: 10, y: 5 };
+        circlex = Car.car1.posx - Car.car2.posx;
+        circley = Car.car1.posy - Car.car2.posy;
+        double distance = Math.Sqrt(circlex * circlex + circley + circley);
+        if (distance < Car1.radius + Car2.radius)
+        {
+            // geen idee wat yoran wilt dat er gebeurd.
+        } */
 }
+

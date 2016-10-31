@@ -24,7 +24,7 @@ namespace Project_Racegame
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.FillRectangle(Brushes.Red, car1.carTransform.position.posX, car1.carTransform.position.posY, 10, 10);
-            e.Graphics.FillRectangle(Brushes.Red, car2.carTransform.position.posX, car2.carTransform.position.posY, 10, 10);
+            e.Graphics.FillRectangle(Brushes.Blue, car2.carTransform.position.posX, car2.carTransform.position.posY, 10, 10);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -131,7 +131,17 @@ namespace Project_Racegame
                 car2.movespeeddown = 0.005f;
                 car2.movespeedforward = 0.05f;
                 car2.movespeedbackward = 0.025f;
-            }
+            }           
+            double circlex = car1.carTransform.position.posX - car2.carTransform.position.posX;
+            double circley = car1.carTransform.position.posY - car2.carTransform.position.posY;
+            double distance = Math.Sqrt(Math.Pow(circlex, 2) + Math.Pow(circley, 2));
+
+            Console.WriteLine(distance);
+            if (distance < 20)
+            {
+                Console.WriteLine("Botsing ");
+                
+            } 
 
             /*dit moet in de cases komen van de colormapping ding.
             case "car naast de baan, dus in gras ofiets dergelijks":

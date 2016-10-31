@@ -183,9 +183,9 @@ namespace Project_Racegame
                 if (car1.checkpoint1==true && car1.checkpoint2==true && car1.checkpoint2==true)
                 {
                     car1.ronde = car1.ronde + 1;
-                    car1.checkpoint1==false;
-                    car1.checkpoint2==false;
-                    car1.checkpoint2==false;
+                    car1.checkpoint1=false;
+                    car1.checkpoint2=false;
+                    car1.checkpoint2=false;
                 }//hetzelfde voor car2
                 break;
             }*/

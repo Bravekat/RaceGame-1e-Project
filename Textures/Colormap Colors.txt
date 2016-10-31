@@ -1,0 +1,3 @@
+White = -1
+Black = -16777216
+Yellow = -256

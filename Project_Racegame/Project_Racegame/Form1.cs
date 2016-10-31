@@ -38,9 +38,9 @@ namespace Project_Racegame
         {
             car1.ColorCollision(colorMap);
             car2.ColorCollision(colorMap);
+            this.label1.Text = "ENERGIE p1: " + Math.Round(car1.energie) + "%";
+            this.label2.Text = "ENERGIE p2: " + Math.Round(car2.energie) + "%";
 
-            this.label1.Text = "ENGERGIE p1: " + Math.Round(car1.engergie) + "%";
-            this.label2.Text = "ENGERGIE p2: " + Math.Round(car2.engergie) + "%";
             if (car1.up == true)
             {
                 car1.carTransform.Move(car1.movespeedforward);
@@ -103,12 +103,12 @@ namespace Project_Racegame
             if (car1.speed == car1.movespeedforward)
             {
                 car1.speed = 3;
-                car1.engergie = car1.engergie - 0.2f;
+                car1.energie = car1.energie - 0.2f;
             }
             if (car1.speed == car1.movespeedbackward)
             {
                 car1.speed = 2;
-                car1.engergie = car1.engergie - 0.1f;
+                car1.energie = car1.energie - 0.1f;
             }
 
             if (car2.down == false && car2.up == false)
@@ -118,31 +118,87 @@ namespace Project_Racegame
             if (car2.speed == car2.movespeedforward)
             {
                 car2.speed = 3;
-                car2.engergie = car2.engergie - 0.2f;
+                car2.energie = car2.energie - 0.2f;
             }
             if (car2.speed == car2.movespeedbackward)
             {
                 car2.speed = 2;
-                car2.engergie = car2.engergie - 0.1f;
+                car2.energie = car2.energie - 0.1f;
             }
 
-            if(car1.engergie <= 1)
+            if(car1.energie <= 1)
             {
-                car1.engergie = 0;
+                car1.energie = 0;
                 car1.movespeedup = 0.01f;
                 car1.movespeeddown = 0.005f;
                 car1.movespeedforward = 0.05f;
                 car1.movespeedbackward = 0.025f;
             }//
-            if (car2.engergie <= 1)
+            if (car2.energie <= 1)
             {
-                car2.engergie = 0;
-                car2.engergie = 0;
+                car2.energie = 0;
                 car2.movespeedup = 0.01f;
                 car2.movespeeddown = 0.005f;
                 car2.movespeedforward = 0.05f;
                 car2.movespeedbackward = 0.025f;
             }
+
+            /*dit moet in de cases komen van de colormapping ding.
+            case "car naast de baan, dus in gras ofiets dergelijks":
+            {
+                car1.movespeedup = 0.01f;
+                car1.movespeeddown = 0.005f;
+                car1.movespeedforward = 0.05f;
+                car1.movespeedbackward = 0.025f;  //hetzelfde voor car2
+                break;
+            }
+            case "car op pitstop":
+            {
+                if(car1.engergie<50)
+                {
+                    car1.energie = 100;
+                    car1.aantalpitstops = car1.aantalpitstops + 1;
+                }
+                //hetzelfde voor car2
+                break;
+            }
+            case "car botst tegen rand":
+            {
+                //hetzelfde voor car2
+                break;
+            }
+            case "car raakt chekpoint1":
+            {
+                car1.chekpoint 1 == true; //hetzelfde voor car2
+                break;
+            }
+            case "car raakt chekpoint2":
+            {
+                if (car1.checkpoint1==true)
+                {
+                    car1.chekpoint 2 = true;
+                }//hetzelfde voor car2
+                break;
+            }
+            case "car raakt chekpoint3":
+            {
+                if (car1.checkpoint1==true && car1.checkpoint2===true)
+                {
+                    car1.chekpoint 3 = true;
+                }//hetzelfde voor car2
+                break;
+            }
+            case "car raakt finish":
+            {
+                if (car1.checkpoint1==true && car1.checkpoint2==true && car1.checkpoint2==true)
+                {
+                    car1.ronde = car1.ronde + 1;
+                    car1.checkpoint1=false;
+                    car1.checkpoint2=false;
+                    car1.checkpoint2=false;
+                }//hetzelfde voor car2
+                break;
+            }*/
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)

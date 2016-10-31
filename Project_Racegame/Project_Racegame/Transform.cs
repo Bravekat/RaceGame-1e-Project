@@ -71,7 +71,7 @@ namespace Project_Racegame
 
         public Rotation()
         {
-            angle = 360;
+            angle = 270;
             rotX = 0;
             rotY = 0;
         }

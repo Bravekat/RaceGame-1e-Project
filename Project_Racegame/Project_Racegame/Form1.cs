@@ -139,8 +139,7 @@ namespace Project_Racegame
             Console.WriteLine(distance);
             if (distance < 20)
             {
-                Console.WriteLine("Botsing ");
-                
+                Console.WriteLine("Botsing ");                
             } 
 
             /*dit moet in de cases komen van de colormapping ding.

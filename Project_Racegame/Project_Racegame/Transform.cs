@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,19 +11,38 @@ namespace Project_Racegame
     {
         public Position position = new Position();
         public Rotation rotation = new Rotation();
+        public Size size;
 
-        public Transform(float posX, float posY)
+        public Transform(float posX, float posY, Bitmap image)
         {
             position.posX = posX;
             position.posY = posY;
+            size = new Size(image);
         }
 
-        public Transform(float posX, float posY, float rotX, float rotY)
+        public Transform(float posX, float posY, Point imageSize)
+        {
+            position.posX = posX;
+            position.posY = posY;
+            size = new Size(imageSize.X, imageSize.Y);
+        }
+
+        public Transform(float posX, float posY, float rotX, float rotY, Bitmap image)
         {
             position.posX = posX;
             position.posY = posY;
             rotation.rotX = rotX;
             rotation.rotY = rotY;
+            size = new Size(image);
+        }
+
+        public Transform(float posX, float posY, float rotX, float rotY, Point imageSize)
+        {
+            position.posX = posX;
+            position.posY = posY;
+            rotation.rotX = rotX;
+            rotation.rotY = rotY;
+            size = new Size(imageSize.X, imageSize.Y);
         }
 
         public void Move(float speedMove)
@@ -40,7 +60,6 @@ namespace Project_Racegame
             rotation.angle = rotation.angle + speedRotate;
             position.posX += rotation.rotX;
             position.posY += rotation.rotY;
-
         }
     }
 
@@ -79,6 +98,24 @@ namespace Project_Racegame
         {
             posX = xPos;
             posY = yPos;
+        }
+    }
+
+    public class Size
+    {
+        public float height;
+        public float width;
+
+        public Size(Bitmap image)
+        {
+            height = image.Height;
+            width = image.Width;
+        }
+
+        public Size(float newHeight, float newWidth)
+        {
+            height = newHeight;
+            width = newWidth;
         }
     }
 }

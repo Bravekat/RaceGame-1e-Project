@@ -85,11 +85,6 @@ namespace Project_Racegame
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
-            //
-            // Zombie
-            //
-            
-
         }
 
         #endregion

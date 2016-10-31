@@ -97,7 +97,18 @@
     <None Include="Moet Naar Bin-Debug\Zombie Players\Zombie.1.0 animation.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Zombie.1.0 animation.gif" />
+    <None Include="Resources\Zombie animation 1-1.png" />
+    <None Include="Resources\Zombie animation 1-2.png" />
+    <None Include="Resources\Zombie animation 1-3.png" />
+    <None Include="Resources\Zombie animation 1-4.png" />
+    <None Include="Resources\Zombie animation 1-5.png" />
+    <None Include="Resources\Zombie animation 1-6.png" />
+    <None Include="Resources\Zombie animation 1-7.png" />
+    <None Include="Resources\Zombie animation 1-8.png" />
+    <None Include="Resources\Zombie animation 1-9.png" />
+    <None Include="Resources\Zombie animation 1-10.png" />
+    <None Include="Resources\Zombie animation 1-11.png" />
+    <None Include="Resources\Zombie animation 1-12.png" />
     <Content Include="Resources\Ztracks1_colormap.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

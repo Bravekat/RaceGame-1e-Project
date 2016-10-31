@@ -14,7 +14,7 @@ namespace Project_Racegame
     {
         Bitmap Backbuffer;
         Bitmap colorMap;
-        Bitmap player1 = Properties.Resources.Zombie_1_0_animation;
+        Bitmap player1 = Properties.Resources.Zombie_animation_1_1;
         Bitmap player2 = Properties.Resources.Zombie_1_0_animation;
         Car car1;
         Car car2;
@@ -30,8 +30,8 @@ namespace Project_Racegame
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.FillRectangle(Brushes.Red, car1.carTransform.position.posX, car1.carTransform.position.posY, 10, 10);
-            e.Graphics.FillRectangle(Brushes.Red, car2.carTransform.position.posX, car2.carTransform.position.posY, 10, 10);
+            e.Graphics.DrawImage(new Bitmap(Properties.Resources.Zombie_animation_1_1), car1.carTransform.position.posX, car1.carTransform.position.posY, 32, 46);
+            e.Graphics.DrawImage(new Bitmap(Properties.Resources.Zombie_animation_1_1), car2.carTransform.position.posX, car2.carTransform.position.posY, 32, 46);
         }
 
         private void timer1_Tick(object sender, EventArgs e)

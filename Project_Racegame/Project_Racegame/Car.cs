@@ -64,7 +64,7 @@ namespace Project_Racegame
         {
             Point anchor = new Point((int)carTransform.position.posX + ((int)carTransform.size.width / 4), (int)carTransform.position.posY + ((int)carTransform.size.height / 3));
             Color pixel = colorMap.GetPixel(anchor.X, anchor.Y);
-            label.Text = "" + ronde;
+            label.Text = "" + pixel.ToArgb();
 
             if (pixel.ToArgb() == -5502435) //rozerand-rechts
             {
@@ -74,7 +74,7 @@ namespace Project_Racegame
             {
                 carTransform.position.posX += 25;
             }
-            if (pixel.ToArgb() == -15260459) //blauwerand-boven
+            if (pixel.ToArgb() == -15392057) //blauwerand-boven
             {
                 carTransform.position.posY += 25;
             }

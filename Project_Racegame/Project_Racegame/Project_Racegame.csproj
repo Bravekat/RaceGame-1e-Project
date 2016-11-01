@@ -109,7 +109,9 @@
     <None Include="Resources\Zombie animation 1-10.png" />
     <None Include="Resources\Zombie animation 1-11.png" />
     <None Include="Resources\Zombie animation 1-12.png" />
-    <Content Include="Resources\Ztracks1_colormap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ztracks1_colormap.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

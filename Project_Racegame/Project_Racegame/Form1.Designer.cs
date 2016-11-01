@@ -42,16 +42,13 @@ namespace Project_Racegame
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-=======
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
->>>>>>> 4f315bc6fd371cb064dff4d6bfac4fce5056d0d0
             this.SuspendLayout();
             // 
             // timer1
@@ -77,7 +74,6 @@ namespace Project_Racegame
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             // 
-<<<<<<< HEAD
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -94,7 +90,6 @@ namespace Project_Racegame
             this.imageList1.Images.SetKeyName(9, "Zombie animation 1-10.png");
             this.imageList1.Images.SetKeyName(10, "Zombie animation 1-11.png");
             this.imageList1.Images.SetKeyName(11, "Zombie animation 1-12.png");
-=======
             // label3
             // 
             this.label3.AutoSize = true;
@@ -148,7 +143,6 @@ namespace Project_Racegame
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 7;
             this.label8.Text = "label8";
->>>>>>> 4f315bc6fd371cb064dff4d6bfac4fce5056d0d0
             // 
             // Form1
             // 

@@ -107,7 +107,7 @@ namespace Project_Racegame
             if (car1.speed == car1.movespeedforward)
             {
                 car1.speed = 4;
-                car1.energie = car1.energie - 0.9f;
+                car1.energie = car1.energie - 0.1f;
                 if (car1.energie <= 1)
                 {
                     car1.speed = 2;

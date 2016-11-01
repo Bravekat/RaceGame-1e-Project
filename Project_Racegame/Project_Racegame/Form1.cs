@@ -15,7 +15,7 @@ namespace Project_Racegame
         Bitmap Backbuffer;
         Bitmap colorMap;
         Bitmap player1 = Properties.Resources.Zombie_animation_1_1;
-        Bitmap player2 = Properties.Resources.Zombie_1_0_animation;
+        Bitmap player2 = Properties.Resources.Zombie_animation_1_1;
         Car car1;
         Car car2;
 
@@ -30,14 +30,18 @@ namespace Project_Racegame
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.DrawImage(new Bitmap(Properties.Resources.Zombie_animation_1_1), car1.carTransform.position.posX, car1.carTransform.position.posY, 32, 46);
-            e.Graphics.DrawImage(new Bitmap(Properties.Resources.Zombie_animation_1_1), car2.carTransform.position.posX, car2.carTransform.position.posY, 32, 46);
+            imageList1.Draw(e.Graphics, new Point((int)car1.carTransform.position.posX, (int)car1.carTransform.position.posY), car1.spritenumber);
+            imageList1.Draw(e.Graphics, new Point((int)car2.carTransform.position.posX, (int)car2.carTransform.position.posY), car2.spritenumber);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             car1.ColorCollision(colorMap);
             car2.ColorCollision(colorMap);
+
+            car1.spritenumber = car1.FrameSelection(car1.spritenumber);
+            car2.spritenumber = car2.FrameSelection(car2.spritenumber);
+
             this.label1.Text = "ENERGIE p1: " + Math.Round(car1.energie) + "%";
             this.label2.Text = "ENERGIE p2: " + Math.Round(car2.energie) + "%";
 

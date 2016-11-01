@@ -21,6 +21,8 @@ namespace Project_Racegame
         public float energie = 100;
         public int player;
 
+        public int spritenumber = 0;
+
         public Car(int newPlayer, Bitmap image)
         {
             player = newPlayer;
@@ -63,6 +65,99 @@ namespace Project_Racegame
             {
                 carTransform.Move(-0.1f);
             }
+        }
+
+        public int FrameSelection(int animationFrame)
+        {
+            if (carTransform.rotation.angle >= 225 && carTransform.rotation.angle < 315)
+            {
+                if(animationFrame == 0 || animationFrame == 1 || animationFrame == 2)
+                {
+                    switch(animationFrame)
+                    {
+                        case 0:
+                            return 1;
+                            break;
+                        case 1:
+                            return 2;
+                            break;
+                        case 2:
+                            return 0;
+                            break;
+                    }
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            if (carTransform.rotation.angle >= 315 || carTransform.rotation.angle < 45)
+            {
+                if (animationFrame == 3 || animationFrame == 4 || animationFrame == 5)
+                {
+                    switch (animationFrame)
+                    {
+                        case 3:
+                            return 4;
+                            break;
+                        case 4:
+                            return 5;
+                            break;
+                        case 5:
+                            return 3;
+                            break;
+                    }
+                }
+                else
+                {
+                    return 3;
+                }
+            }
+            if (carTransform.rotation.angle >= 45 && carTransform.rotation.angle < 135)
+            {
+                if (animationFrame == 6 || animationFrame == 7 || animationFrame == 8)
+                {
+                    switch (animationFrame)
+                    {
+                        case 6:
+                            return 7;
+                            break;
+                        case 7:
+                            return 8;
+                            break;
+                        case 8:
+                            return 6;
+                            break;
+                    }
+                }
+                else
+                {
+                    return 6;
+                }
+            }
+            if (carTransform.rotation.angle >= 135 && carTransform.rotation.angle < 225)
+            {
+                if (animationFrame == 9 || animationFrame == 10 || animationFrame == 11)
+                {
+                    switch (animationFrame)
+                    {
+                        case 9:
+                            return 10;
+                            break;
+                        case 10:
+                            return 11;
+                            break;
+                        case 11:
+                            return 9;
+                            break;
+                    }
+                }
+                else
+                {
+                    return 9;
+                }
+            }
+            return 0;
         }
 
         public void KeyPress(KeyEventArgs e)

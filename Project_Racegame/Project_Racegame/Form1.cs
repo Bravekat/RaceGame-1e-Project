@@ -139,7 +139,11 @@ namespace Project_Racegame
             Console.WriteLine(distance);
             if (distance < 20)
             {
-                Console.WriteLine("Botsing ");                
+                car1.carTransform.position.posX += (car1.carTransform.position.posX - car2.carTransform.position.posX) * (Math.Abs(car2.movespeedup) / 9 + 0.4f) / 4;
+                car1.carTransform.position.posY += (car1.carTransform.position.posY - car2.carTransform.position.posY) * (Math.Abs(car2.movespeedup) / 9 + 0.4f) / 4;
+                car2.carTransform.position.posX += (car2.carTransform.position.posX - car1.carTransform.position.posX) * (Math.Abs(car1.movespeedup) / 9 + 0.4f) / 4;
+                car2.carTransform.position.posY += (car2.carTransform.position.posY - car1.carTransform.position.posY) * (Math.Abs(car1.movespeedup) / 9 + 0.4f) / 4;
+                
             } 
 
             /*dit moet in de cases komen van de colormapping ding.

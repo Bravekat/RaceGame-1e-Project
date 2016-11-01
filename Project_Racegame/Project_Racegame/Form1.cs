@@ -15,7 +15,7 @@ namespace Project_Racegame
         Bitmap Backbuffer;
         Bitmap colorMap;
         Bitmap player1 = Properties.Resources.Zombie_animation_1_1;
-        Bitmap player2 = Properties.Resources.Zombie_1_0_animation;
+        Bitmap player2 = Properties.Resources.Zombie_animation_1_1;
         Car car1;
         Car car2;
 
@@ -36,8 +36,8 @@ namespace Project_Racegame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            car1.ColorCollision(colorMap, label3);
-            //car2.ColorCollision(colorMap);
+            car1.ColorCollision(colorMap, label3, label5, label7);
+            car2.ColorCollision(colorMap, label4, label6, label8);
             this.label1.Text = "ENERGIE p1: " + Math.Round(car1.energie) + "%";
             this.label2.Text = "ENERGIE p2: " + Math.Round(car2.energie) + "%";
 
@@ -104,6 +104,10 @@ namespace Project_Racegame
             {
                 car1.speed = 3;
                 car1.energie = car1.energie - 0.1f;
+                if (car1.energie <= 1)
+                {
+                    car1.speed = 1;
+                }
             }
             if (car1.speed == car1.movespeedbackward)
             {
@@ -119,6 +123,10 @@ namespace Project_Racegame
             {
                 car2.speed = 3;
                 car2.energie = car2.energie - 0.1f;
+                if (car2.energie <= 1)
+                {
+                    car2.speed = 1;
+                }
             }
             if (car2.speed == car2.movespeedbackward)
             {
@@ -133,7 +141,7 @@ namespace Project_Racegame
                 car1.movespeeddown = 0.005f;
                 car1.movespeedforward = 0.05f;
                 car1.movespeedbackward = 0.025f;
-            }//
+            }
             if (car2.energie <= 1)
             {
                 car2.energie = 0;

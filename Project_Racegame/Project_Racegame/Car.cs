@@ -60,11 +60,13 @@ namespace Project_Racegame
             speed = speed1;
         }
 
-        public void ColorCollision(Bitmap colorMap, Label label)
+        public void ColorCollision(Bitmap colorMap, Label label, Label labelspeed, Label labelpitstop)
         {
             Point anchor = new Point((int)carTransform.position.posX + ((int)carTransform.size.width / 4), (int)carTransform.position.posY + ((int)carTransform.size.height / 3));
             Color pixel = colorMap.GetPixel(anchor.X, anchor.Y);
-            label.Text = "" + ronde;
+            label.Text = "RONDE:" + ronde;
+            labelspeed.Text = "SNELHEID:" + speed;
+            labelpitstop.Text = "AANTAL PITSTOPS:" + aantalpitstops;
 
             if (pixel.ToArgb() == -5502435) //rozerand-rechts
             {
@@ -84,10 +86,10 @@ namespace Project_Racegame
             }
             if (pixel.ToArgb() == -256) //pitstop-geel
             {
-                if (energie < 50)
+                if (energie < 80)
                 {
                     energie = 100;
-                    aantalpitstops = aantalpitstops + 1;
+                    aantalpitstops += 1;
                     movespeedup = 0.02f;
                     movespeeddown = 0.01f;
                     movespeedforward = 0.1f;

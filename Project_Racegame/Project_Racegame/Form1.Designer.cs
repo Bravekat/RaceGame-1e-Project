@@ -38,16 +38,17 @@ namespace Project_Racegame
         /// </summary>
         private void InitializeComponent()
         {            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timer1
@@ -73,6 +74,22 @@ namespace Project_Racegame
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Zombie animation 1-1.png");
+            this.imageList1.Images.SetKeyName(1, "Zombie animation 1-2.png");
+            this.imageList1.Images.SetKeyName(2, "Zombie animation 1-3.png");
+            this.imageList1.Images.SetKeyName(3, "Zombie animation 1-4.png");
+            this.imageList1.Images.SetKeyName(4, "Zombie animation 1-5.png");
+            this.imageList1.Images.SetKeyName(5, "Zombie animation 1-6.png");
+            this.imageList1.Images.SetKeyName(6, "Zombie animation 1-7.png");
+            this.imageList1.Images.SetKeyName(7, "Zombie animation 1-8.png");
+            this.imageList1.Images.SetKeyName(8, "Zombie animation 1-9.png");
+            this.imageList1.Images.SetKeyName(9, "Zombie animation 1-10.png");
+            this.imageList1.Images.SetKeyName(10, "Zombie animation 1-11.png");
+            this.imageList1.Images.SetKeyName(11, "Zombie animation 1-12.png");
             // label3
             // 
             this.label3.AutoSize = true;
@@ -127,20 +144,10 @@ namespace Project_Racegame
             this.label8.TabIndex = 7;
             this.label8.Text = "label8";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(676, 116);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "label9";
-            // 
             // Form1
             // 
             this.BackgroundImage = global::Project_Racegame.Properties.Resources.Ztracks1;
             this.ClientSize = new System.Drawing.Size(1026, 721);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -168,12 +175,15 @@ namespace Project_Racegame
         public System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+
+        private ImageList imageList1;
+
         private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
         private Label label7;
         private Label label8;
-        private Label label9;
+
     }
 }

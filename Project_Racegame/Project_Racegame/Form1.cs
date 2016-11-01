@@ -30,14 +30,18 @@ namespace Project_Racegame
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.DrawImage(new Bitmap(Properties.Resources.Zombie_animation_1_1), car1.carTransform.position.posX, car1.carTransform.position.posY, 32, 46);
-            e.Graphics.DrawImage(new Bitmap(Properties.Resources.Zombie_animation_1_1), car2.carTransform.position.posX, car2.carTransform.position.posY, 32, 46);
+            imageList1.Draw(e.Graphics, new Point((int)car1.carTransform.position.posX, (int)car1.carTransform.position.posY), car1.spritenumber);
+            imageList1.Draw(e.Graphics, new Point((int)car2.carTransform.position.posX, (int)car2.carTransform.position.posY), car2.spritenumber);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            car1.ColorCollision(colorMap, label3, label5, label7, label9);
-            //car2.ColorCollision(colorMap, label4, label6, label8);
+            car1.ColorCollision(colorMap, label3, label5, label7);
+            car2.ColorCollision(colorMap, label4, label6, label8);
+
+            car1.spritenumber = car1.FrameSelection(car1.spritenumber);
+            car2.spritenumber = car2.FrameSelection(car2.spritenumber);
+
             this.label1.Text = "ENERGIE p1: " + Math.Round(car1.energie) + "%";
             this.label2.Text = "ENERGIE p2: " + Math.Round(car2.energie) + "%";
 
@@ -102,17 +106,21 @@ namespace Project_Racegame
             }
             if (car1.speed == car1.movespeedforward)
             {
-                car1.speed = 3;
+                car1.speed = 4;
                 car1.energie = car1.energie - 0.1f;
                 if (car1.energie <= 1)
                 {
-                    car1.speed = 1;
+                    car1.speed = 2;
                 }
             }
             if (car1.speed == car1.movespeedbackward)
             {
-                car1.speed = 2;
+                car1.speed = 3;
                 car1.energie = car1.energie - 0.05f;
+                if (car1.energie <= 1)
+                {
+                    car1.speed = 1;
+                }
             }
 
             if (car2.down == false && car2.up == false)
@@ -121,35 +129,22 @@ namespace Project_Racegame
             }
             if (car2.speed == car2.movespeedforward)
             {
-                car2.speed = 3;
+                car2.speed = 4;
                 car2.energie = car2.energie - 0.1f;
                 if (car2.energie <= 1)
                 {
-                    car2.speed = 1;
+                    car2.speed = 2;
                 }
             }
             if (car2.speed == car2.movespeedbackward)
             {
-                car2.speed = 2;
+                car2.speed = 3;
                 car2.energie = car2.energie - 0.05f;
-            }
-
-            if(car1.energie <= 1)
-            {
-                car1.energie = 0;
-                car1.movespeedup = 0.01f;
-                car1.movespeeddown = 0.005f;
-                car1.movespeedforward = 0.05f;
-                car1.movespeedbackward = 0.025f;
-            }
-            if (car2.energie <= 1)
-            {
-                car2.energie = 0;
-                car2.movespeedup = 0.01f;
-                car2.movespeeddown = 0.005f;
-                car2.movespeedforward = 0.05f;
-                car2.movespeedbackward = 0.025f;
-            }            
+                if (car2.energie <= 1)
+                {
+                    car2.speed = 1;
+                }
+            }        
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)

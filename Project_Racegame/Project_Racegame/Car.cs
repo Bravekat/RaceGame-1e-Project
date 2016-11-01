@@ -27,6 +27,8 @@ namespace Project_Racegame
         public bool finish = false;
         public int player;
 
+        public int spritenumber = 0;
+
         public Car(int newPlayer, Bitmap image)
         {
             player = newPlayer;
@@ -60,14 +62,13 @@ namespace Project_Racegame
             speed = speed1;
         }
 
-        public void ColorCollision(Bitmap colorMap, Label label, Label labelspeed, Label labelpitstop, Label labeltest)
+        public void ColorCollision(Bitmap colorMap, Label label, Label labelspeed, Label labelpitstop)
         {
             Point anchor = new Point((int)carTransform.position.posX + ((int)carTransform.size.width / 4), (int)carTransform.position.posY + ((int)carTransform.size.height / 3));
             Color pixel = colorMap.GetPixel(anchor.X, anchor.Y);
             label.Text = "RONDE:" + ronde;
             labelspeed.Text = "SNELHEID:" + speed;
             labelpitstop.Text = "AANTAL PITSTOPS:" + aantalpitstops;
-            labeltest.Text = "" + pixel.ToArgb();
 
             if (pixel.ToArgb() == -5502435) //rozerand-rechts
             {
@@ -131,6 +132,14 @@ namespace Project_Racegame
                 movespeeddown = 0.005f;
                 movespeedforward = 0.05f;
                 movespeedbackward = 0.025f;
+                if (energie <= 1)
+                {
+                    energie = 0;
+                    movespeedup = 0.005f;
+                    movespeeddown = 0.0025f;
+                    movespeedforward = 0.025f;
+                    movespeedbackward = 0.0125f;
+                }
             }
             if (pixel.ToArgb() == -1) //opparkoers-wit
             {
@@ -138,8 +147,109 @@ namespace Project_Racegame
                 movespeeddown = 0.01f;
                 movespeedforward = 0.1f;
                 movespeedbackward = 0.05f;
+                if (energie <= 1)
+                {
+                    energie = 0;
+                    movespeedup = 0.01f;
+                    movespeeddown = 0.005f;
+                    movespeedforward = 0.05f;
+                    movespeedbackward = 0.025f;
+                }
             }
 
+        }
+
+        public int FrameSelection(int animationFrame)
+        {
+            if (carTransform.rotation.angle >= 225 && carTransform.rotation.angle < 315)
+            {
+                if(animationFrame == 0 || animationFrame == 1 || animationFrame == 2)
+                {
+                    switch(animationFrame)
+                    {
+                        case 0:
+                            return 1;
+                            break;
+                        case 1:
+                            return 2;
+                            break;
+                        case 2:
+                            return 0;
+                            break;
+                    }
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            if (carTransform.rotation.angle >= 315 || carTransform.rotation.angle < 45)
+            {
+                if (animationFrame == 3 || animationFrame == 4 || animationFrame == 5)
+                {
+                    switch (animationFrame)
+                    {
+                        case 3:
+                            return 4;
+                            break;
+                        case 4:
+                            return 5;
+                            break;
+                        case 5:
+                            return 3;
+                            break;
+                    }
+                }
+                else
+                {
+                    return 3;
+                }
+            }
+            if (carTransform.rotation.angle >= 45 && carTransform.rotation.angle < 135)
+            {
+                if (animationFrame == 6 || animationFrame == 7 || animationFrame == 8)
+                {
+                    switch (animationFrame)
+                    {
+                        case 6:
+                            return 7;
+                            break;
+                        case 7:
+                            return 8;
+                            break;
+                        case 8:
+                            return 6;
+                            break;
+                    }
+                }
+                else
+                {
+                    return 6;
+                }
+            }
+            if (carTransform.rotation.angle >= 135 && carTransform.rotation.angle < 225)
+            {
+                if (animationFrame == 9 || animationFrame == 10 || animationFrame == 11)
+                {
+                    switch (animationFrame)
+                    {
+                        case 9:
+                            return 10;
+                            break;
+                        case 10:
+                            return 11;
+                            break;
+                        case 11:
+                            return 9;
+                            break;
+                    }
+                }
+                else
+                {
+                    return 9;
+                }
+            }
+            return 0;
         }
 
         public void KeyPress(KeyEventArgs e)

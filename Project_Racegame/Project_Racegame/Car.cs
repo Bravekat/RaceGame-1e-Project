@@ -19,6 +19,12 @@ namespace Project_Racegame
         public float speed = 0f;
         public float rotatespeed = 20;
         public float energie = 100;
+        public int aantalpitstops = 0;
+        public bool checkpoint1 = false;
+        public bool checkpoint2 = false;
+        public bool checkpoint3 = false;
+        public int ronde = 0;
+        public bool finish = false;
         public int player;
 
         public int spritenumber = 0;
@@ -56,15 +62,101 @@ namespace Project_Racegame
             speed = speed1;
         }
 
-        public void ColorCollision(Bitmap colorMap)
+        public void ColorCollision(Bitmap colorMap, Label label, Label labelspeed, Label labelpitstop)
         {
             Point anchor = new Point((int)carTransform.position.posX + ((int)carTransform.size.width / 4), (int)carTransform.position.posY + ((int)carTransform.size.height / 3));
             Color pixel = colorMap.GetPixel(anchor.X, anchor.Y);
+            label.Text = "RONDE:" + ronde;
+            labelspeed.Text = "SNELHEID:" + speed;
+            labelpitstop.Text = "AANTAL PITSTOPS:" + aantalpitstops;
 
-            if (pixel.ToArgb() != -1)
+            if (pixel.ToArgb() == -5502435) //rozerand-rechts
             {
-                carTransform.Move(-0.1f);
+                carTransform.position.posX -= 25;
             }
+            if (pixel.ToArgb() == -15687917) //groenerand-links
+            {
+                carTransform.position.posX += 25;
+            }
+            if (pixel.ToArgb() == -15392057) //blauwerand-boven
+            {
+                carTransform.position.posY += 25;
+            }
+            if (pixel.ToArgb() == -7661363) //paarserand-onder
+            {
+                carTransform.position.posY -= 25;
+            }
+            if (pixel.ToArgb() == -256) //pitstop-geel
+            {
+                if (energie < 80)
+                {
+                    energie = 100;
+                    aantalpitstops += 1;
+                    movespeedup = 0.02f;
+                    movespeeddown = 0.01f;
+                    movespeedforward = 0.1f;
+                    movespeedbackward = 0.05f;
+                }
+            }
+            if (pixel.ToArgb() == -5350137) //checkpoint1
+            {
+                checkpoint1 = true;
+            }
+            if (pixel.ToArgb() == -43776) //checkpoint2
+            {
+                if(checkpoint1 == true)
+                {
+                    checkpoint2 = true;
+                }
+            }
+            if (pixel.ToArgb() == -16715521) //checkpoint3
+            {
+                if (checkpoint1 == true && checkpoint2 == true)
+                {
+                    checkpoint3 = true;
+                }
+            }
+            if (pixel.ToArgb() == -7237231) //finish/ronde
+            {
+                if (checkpoint1 == true && checkpoint2 == true && checkpoint2 == true)
+                {
+                    ronde = ronde + 1;
+                    checkpoint1 = false;
+                    checkpoint2 = false;
+                    checkpoint3 = false;
+                }
+            }
+            if (pixel.ToArgb() == -16777216) //vanparkoers-zwart
+            {
+                movespeedup = 0.01f;
+                movespeeddown = 0.005f;
+                movespeedforward = 0.05f;
+                movespeedbackward = 0.025f;
+                if (energie <= 1)
+                {
+                    energie = 0;
+                    movespeedup = 0.005f;
+                    movespeeddown = 0.0025f;
+                    movespeedforward = 0.025f;
+                    movespeedbackward = 0.0125f;
+                }
+            }
+            if (pixel.ToArgb() == -1) //opparkoers-wit
+            {
+                movespeedup = 0.02f;
+                movespeeddown = 0.01f;
+                movespeedforward = 0.1f;
+                movespeedbackward = 0.05f;
+                if (energie <= 1)
+                {
+                    energie = 0;
+                    movespeedup = 0.01f;
+                    movespeeddown = 0.005f;
+                    movespeedforward = 0.05f;
+                    movespeedbackward = 0.025f;
+                }
+            }
+
         }
 
         public int FrameSelection(int animationFrame)

@@ -131,12 +131,11 @@ namespace Project_Racegame
                 car2.movespeeddown = 0.005f;
                 car2.movespeedforward = 0.05f;
                 car2.movespeedbackward = 0.025f;
-            }           
+            }
+
             double circlex = car1.carTransform.position.posX - car2.carTransform.position.posX;
             double circley = car1.carTransform.position.posY - car2.carTransform.position.posY;
             double distance = Math.Sqrt(Math.Pow(circlex, 2) + Math.Pow(circley, 2));
-
-            Console.WriteLine(distance);
             if (distance < 20)
             {
                 car1.carTransform.position.posX += (car1.carTransform.position.posX - car2.carTransform.position.posX) * (Math.Abs(car2.movespeedup) / 9 + 0.4f) / 4;

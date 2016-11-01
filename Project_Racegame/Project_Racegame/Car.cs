@@ -56,7 +56,7 @@ namespace Project_Racegame
 
         public void ColorCollision(Bitmap colorMap)
         {
-            Point anchor = new Point((int)carTransform.position.posX + ((int)carTransform.size.width / 2), (int)carTransform.position.posY + ((int)carTransform.size.height / 2));
+            Point anchor = new Point((int)carTransform.position.posX + ((int)carTransform.size.width / 4), (int)carTransform.position.posY + ((int)carTransform.size.height / 3));
             Color pixel = colorMap.GetPixel(anchor.X, anchor.Y);
 
             if (pixel.ToArgb() != -1)

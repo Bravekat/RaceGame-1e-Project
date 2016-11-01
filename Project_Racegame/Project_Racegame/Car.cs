@@ -77,7 +77,7 @@ namespace Project_Racegame
             {
                 carTransform.position.posX += 25;
             }
-            if (pixel.ToArgb() == -15392057) //blauwerand-boven
+            if (pixel.ToArgb() == -15260459) //blauwerand-boven
             {
                 carTransform.position.posY += 25;
             }

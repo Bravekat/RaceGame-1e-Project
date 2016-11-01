@@ -19,6 +19,7 @@ namespace Project_Racegame
         public float speed = 0f;
         public float rotatespeed = 20;
         public float energie = 100;
+        public int ronde = 0;
         public int player;
 
         public Car(int newPlayer)

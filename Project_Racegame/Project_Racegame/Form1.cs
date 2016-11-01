@@ -145,6 +145,19 @@ namespace Project_Racegame
                 
             } 
 
+            if (car1.ronde == 3 || car2.ronde == 3)
+            {
+                //stop besturing
+                if (car1.ronde == 3)
+                {
+                    //player 1 wins
+                }
+                if (car2.ronde == 3)
+                {
+                    //player 2 wins
+                }
+            }
+            
             /*dit moet in de cases komen van de colormapping ding.
             case "car naast de baan, dus in gras ofiets dergelijks":
             {

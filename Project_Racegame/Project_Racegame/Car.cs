@@ -64,7 +64,7 @@ namespace Project_Racegame
         {
             Point anchor = new Point((int)carTransform.position.posX + ((int)carTransform.size.width / 4), (int)carTransform.position.posY + ((int)carTransform.size.height / 3));
             Color pixel = colorMap.GetPixel(anchor.X, anchor.Y);
-            label.Text = "" + pixel.ToArgb();
+            label.Text = "" + ronde;
 
             if (pixel.ToArgb() == -5502435) //rozerand-rechts
             {

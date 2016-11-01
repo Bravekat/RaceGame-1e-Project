@@ -103,12 +103,12 @@ namespace Project_Racegame
             if (car1.speed == car1.movespeedforward)
             {
                 car1.speed = 3;
-                car1.energie = car1.energie - 0.2f;
+                car1.energie = car1.energie - 0.1f;
             }
             if (car1.speed == car1.movespeedbackward)
             {
                 car1.speed = 2;
-                car1.energie = car1.energie - 0.1f;
+                car1.energie = car1.energie - 0.05f;
             }
 
             if (car2.down == false && car2.up == false)
@@ -118,12 +118,12 @@ namespace Project_Racegame
             if (car2.speed == car2.movespeedforward)
             {
                 car2.speed = 3;
-                car2.energie = car2.energie - 0.2f;
+                car2.energie = car2.energie - 0.1f;
             }
             if (car2.speed == car2.movespeedbackward)
             {
                 car2.speed = 2;
-                car2.energie = car2.energie - 0.1f;
+                car2.energie = car2.energie - 0.05f;
             }
 
             if(car1.energie <= 1)

@@ -22,8 +22,8 @@ namespace Project_Racegame
         public Form1()
         {
             InitializeComponent();
-            BackgroundImage = Properties.Resources.Ztracks1;
-            colorMap = Properties.Resources.Ztracks1_colormap;
+            BackgroundImage = Properties.Resources.Ztracks2_colormap;
+            colorMap = Properties.Resources.Ztracks2_colormap;
             car1 = new Car(1, 30, 500, player1);
             car2 = new Car(2, 70, 500, player2);
         }
@@ -36,8 +36,8 @@ namespace Project_Racegame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            car1.ColorCollision(colorMap, label3, label5, label7);
-            car2.ColorCollision(colorMap, label4, label6, label8);
+            car1.ColorCollision(colorMap, label3, label5, label7, label9);
+            //car2.ColorCollision(colorMap, label4, label6, label8);
             this.label1.Text = "ENERGIE p1: " + Math.Round(car1.energie) + "%";
             this.label2.Text = "ENERGIE p2: " + Math.Round(car2.energie) + "%";
 

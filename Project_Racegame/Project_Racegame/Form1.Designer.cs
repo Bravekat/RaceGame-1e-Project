@@ -47,6 +47,7 @@ namespace Project_Racegame
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timer1
@@ -126,10 +127,20 @@ namespace Project_Racegame
             this.label8.TabIndex = 7;
             this.label8.Text = "label8";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(676, 116);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "label9";
+            // 
             // Form1
             // 
             this.BackgroundImage = global::Project_Racegame.Properties.Resources.Ztracks1;
             this.ClientSize = new System.Drawing.Size(1026, 721);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -163,5 +174,6 @@ namespace Project_Racegame
         private Label label6;
         private Label label7;
         private Label label8;
+        private Label label9;
     }
 }

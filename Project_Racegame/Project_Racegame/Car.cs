@@ -60,13 +60,14 @@ namespace Project_Racegame
             speed = speed1;
         }
 
-        public void ColorCollision(Bitmap colorMap, Label label, Label labelspeed, Label labelpitstop)
+        public void ColorCollision(Bitmap colorMap, Label label, Label labelspeed, Label labelpitstop, Label labeltest)
         {
             Point anchor = new Point((int)carTransform.position.posX + ((int)carTransform.size.width / 4), (int)carTransform.position.posY + ((int)carTransform.size.height / 3));
             Color pixel = colorMap.GetPixel(anchor.X, anchor.Y);
             label.Text = "RONDE:" + ronde;
             labelspeed.Text = "SNELHEID:" + speed;
             labelpitstop.Text = "AANTAL PITSTOPS:" + aantalpitstops;
+            labeltest.Text = "" + pixel.ToArgb();
 
             if (pixel.ToArgb() == -5502435) //rozerand-rechts
             {
@@ -94,7 +95,7 @@ namespace Project_Racegame
                     movespeeddown = 0.01f;
                     movespeedforward = 0.1f;
                     movespeedbackward = 0.05f;
-    }
+                }
             }
             if (pixel.ToArgb() == -5350137) //checkpoint1
             {
@@ -123,6 +124,20 @@ namespace Project_Racegame
                     checkpoint2 = false;
                     checkpoint3 = false;
                 }
+            }
+            if (pixel.ToArgb() == -16777216) //vanparkoers-zwart
+            {
+                movespeedup = 0.01f;
+                movespeeddown = 0.005f;
+                movespeedforward = 0.05f;
+                movespeedbackward = 0.025f;
+            }
+            if (pixel.ToArgb() == -1) //opparkoers-wit
+            {
+                movespeedup = 0.02f;
+                movespeeddown = 0.01f;
+                movespeedforward = 0.1f;
+                movespeedbackward = 0.05f;
             }
 
         }

@@ -19,7 +19,7 @@ namespace Project_Racegame
         int imagecounter = 0;        
         public Menu()
         {
-           //pictureBox1.Image = images[imagecounter];
+          // pictureBox1.Image = images[imagecounter];
             InitializeComponent();            
         }
 

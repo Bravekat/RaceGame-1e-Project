@@ -44,43 +44,45 @@ namespace Project_Racegame
         }
 
         private void player1left_Click(object sender, EventArgs e)
-        {
-            ic-- ;
-            if (ic < 0) { ic = 7; }
+        {            
+            if (ic < 0) { ic = 7; pictureBox1.Image = images[ic]; }
             pictureBox1.Image = images[ic];
+            ic--;
         }
 
         private void player1right_Click(object sender, EventArgs e)
-        {            
-            ic++; 
-            if (ic > 7) { ic = 0; }
+        {             
+            if (ic > 7) { ic = 0; pictureBox1.Image = images[ic]; }
             pictureBox1.Image = images[ic];
+            ic++;
         }
 
         private void player2left_Click(object sender, EventArgs e)
-        {
-            ic2--;
-            if (ic2 < 0) { ic2 = 7; }
+        {            
+            if (ic2 < 0) { ic2 = 7; pictureBox2.Image = images[ic2]; }
             pictureBox2.Image = images[ic2];
+            ic2--;
         }
 
         private void player2right_Click(object sender, EventArgs e)
         {
-            ic2++;            
+            if (ic2 > 7) { ic2 = 0; pictureBox2.Image = images[ic2]; }                        
             pictureBox2.Image = images[ic2];
-            if (ic2 > 1) { ic2 = 0; pictureBox2.Image = images[ic2]; }
+            ic2++;
         }
 
         private void trackleft_Click(object sender, EventArgs e)
         {
-            ic3--;
+            if (ic3 > 3) { ic3 = 0; pictureBox3.Image = tracks[ic3]; }
             pictureBox3.Image = tracks[ic3];
+            ic3--;
         }
 
         private void trackright_Click(object sender, EventArgs e)
         {
-            ic3++;
+            if (ic3 < 0) { ic3 = 0; pictureBox3.Image = tracks[ic3]; }
             pictureBox3.Image = tracks[ic3];
+            ic3++;
         }
     }
 }

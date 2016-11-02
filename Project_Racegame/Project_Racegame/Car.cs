@@ -17,6 +17,7 @@ namespace Project_Racegame
         public float movespeedforward = 0.1f;
         public float movespeedbackward = 0.05f;
         public float speed = 0f;
+        public float snelheid = 0f;
         public float rotatespeed = 20;
         public float energie = 100;
         public int aantalpitstops = 0;
@@ -129,6 +130,28 @@ namespace Project_Racegame
             }
             if (pixel.ToArgb() == -16777216) //vanparkoers-zwart
             {
+                if (snelheid == 0)
+                {
+                    speed = 0;
+                }
+                if (snelheid == movespeedforward)
+                {
+                    speed = 3;
+                    energie = energie - 0.1f;
+                    if (energie <= 1)
+                    {
+                        speed = 2;
+                    }
+                }
+                if (snelheid == movespeedbackward)
+                {
+                    speed = 2;
+                    energie = energie - 0.05f;
+                    if (energie <= 1)
+                    {
+                        speed = 1;
+                    }
+                }
                 movespeedup = 0.01f;
                 movespeeddown = 0.005f;
                 movespeedforward = 0.05f;
@@ -144,6 +167,28 @@ namespace Project_Racegame
             }
             if (pixel.ToArgb() == -1) //opparkoers-wit
             {
+                if (snelheid == 0)
+                {
+                    speed = 0;
+                }
+                if (snelheid == movespeedforward)
+                {
+                    speed = 4;
+                    energie = energie - 0.1f;
+                    if (energie <= 1)
+                    {
+                        speed = 3;
+                    }
+                }
+                if (snelheid == movespeedbackward)
+                {
+                    speed = 3;
+                    energie = energie - 0.05f;
+                    if (energie <= 1)
+                    {
+                        speed = 2;
+                    }
+                }
                 movespeedup = 0.02f;
                 movespeeddown = 0.01f;
                 movespeedforward = 0.1f;

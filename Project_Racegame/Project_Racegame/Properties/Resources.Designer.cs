@@ -22,7 +22,6 @@ namespace Project_Racegame.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-
     public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
@@ -37,7 +36,6 @@ namespace Project_Racegame.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
@@ -59,6 +57,16 @@ namespace Project_Racegame.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap stop {
+            get {
+                object obj = ResourceManager.GetObject("stop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -118,16 +126,6 @@ namespace Project_Racegame.Properties {
         public static System.Drawing.Bitmap Ztracks2 {
             get {
                 object obj = ResourceManager.GetObject("Ztracks2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Ztracks2_colormap {
-            get {
-                object obj = ResourceManager.GetObject("Ztracks2_colormap", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -19,8 +19,8 @@ namespace Project_Racegame
         public Form1()
         {
             InitializeComponent();
-            BackgroundImage = Properties.Resources.Ztracks2_colormap;
-            colorMap = Properties.Resources.Ztracks2_colormap;
+            BackgroundImage = Properties.Resources.Ztracks1_colormap;
+            colorMap = Properties.Resources.Ztracks1_colormap;
             car1 = new Car(1, 30, 500, 32, 46);
             car2 = new Car(2, 70, 500, 32, 46);
         }

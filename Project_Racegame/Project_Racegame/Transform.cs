@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Project_Racegame
 {
     public class Transform
-    {
+    {        
         public Position position = new Position();
         public Rotation rotation = new Rotation();
         public Size size;
@@ -49,7 +49,7 @@ namespace Project_Racegame
         {
             Move(speedMove, 0);
         }
-        
+
         public void Move(float speedMove, float speedRotate)
         {
             rotation.angle = rotation.angle + speedRotate;
@@ -124,3 +124,4 @@ namespace Project_Racegame
         }
     }
 }
+

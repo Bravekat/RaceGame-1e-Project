@@ -273,8 +273,6 @@ namespace Project_Racegame
             // 
             // Form1
             // 
-            this.BackgroundImage = global::Project_Racegame.Properties.Resources.Ztracks1;
-            this.ClientSize = new System.Drawing.Size(1024, 721);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -283,6 +281,11 @@ namespace Project_Racegame
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+
+            /*this.BackgroundImage = Image.FromFile(Path.Combine(Environment.CurrentDirectory, "Ztracks1.png")); */
+            this.ClientSize = new System.Drawing.Size(1042, 768);
+            this.MaximumSize = new System.Drawing.Size(1042, 768);
+
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximumSize = new System.Drawing.Size(1042, 768);

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace Project_Racegame
         public float speed = 0f;
         public float rotatespeed = 20;
         public float energie = 100;
+
         public int aantalpitstops = 0;
         public bool checkpoint1 = false;
         public bool checkpoint2 = false;
@@ -26,6 +28,7 @@ namespace Project_Racegame
         public int ronde = 0;
         public bool finish = false;
         public bool wins = false;
+
         public int player;
 
         public int spritenumber = 0;
@@ -338,5 +341,5 @@ namespace Project_Racegame
                 }
             }
         }
-    }
+        }   
 }

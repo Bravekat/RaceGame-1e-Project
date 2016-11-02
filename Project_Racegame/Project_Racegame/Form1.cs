@@ -27,6 +27,7 @@ namespace Project_Racegame
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+
             if(car1.wins == true || car2.wins == true)
             {
                 if (car1.wins == true)
@@ -141,7 +142,63 @@ namespace Project_Racegame
             {
                 car2.speed = 4;
                 car2.energie = car2.energie - 0.1f;
-                if (car2.energie <= 1)
+            }
+
+            if(car1.energie <= 1)
+            {
+                car1.energie = 0;
+                car1.movespeedup = 0.01f;
+                car1.movespeeddown = 0.005f;
+                car1.movespeedforward = 0.05f;
+                car1.movespeedbackward = 0.025f;
+            }//
+            if (car2.energie <= 1)
+            {
+                car2.energie = 0;
+                car2.movespeedup = 0.01f;
+                car2.movespeeddown = 0.005f;
+                car2.movespeedforward = 0.05f;
+                car2.movespeedbackward = 0.025f;
+            }
+
+            double circlex = car1.carTransform.position.posX - car2.carTransform.position.posX;
+            double circley = car1.carTransform.position.posY - car2.carTransform.position.posY;
+            double distance = Math.Sqrt(Math.Pow(circlex, 2) + Math.Pow(circley, 2));
+            if (distance < 20)
+            {
+                car1.carTransform.position.posX += (car1.carTransform.position.posX - car2.carTransform.position.posX) * (Math.Abs(car2.movespeedup) / 9 + 0.4f) / 4;
+                car1.carTransform.position.posY += (car1.carTransform.position.posY - car2.carTransform.position.posY) * (Math.Abs(car2.movespeedup) / 9 + 0.4f) / 4;
+                car2.carTransform.position.posX += (car2.carTransform.position.posX - car1.carTransform.position.posX) * (Math.Abs(car1.movespeedup) / 9 + 0.4f) / 4;
+                car2.carTransform.position.posY += (car2.carTransform.position.posY - car1.carTransform.position.posY) * (Math.Abs(car1.movespeedup) / 9 + 0.4f) / 4;
+                
+            } 
+
+            if (car1.ronde == 3 || car2.ronde == 3)
+            {
+                //stop besturing
+                if (car1.ronde == 3)
+                {
+                    //player 1 wins
+                }
+                if (car2.ronde == 3)
+                {
+                    //player 2 wins
+                }
+            }
+            
+            /*dit moet in de cases komen van de colormapping ding.
+            case "car naast de baan, dus in gras ofiets dergelijks":
+            {
+                car1.movespeedup = 0.01f;
+                car1.movespeeddown = 0.005f;
+                car1.movespeedforward = 0.05f;
+                car1.movespeedbackward = 0.025f;  //hetzelfde voor car2
+                break;
+            }
+            case "car op pitstop":
+            {
+                if(car1.engergie<50)
+
                 {
                     car2.speed = 2;
                 }
@@ -165,7 +222,7 @@ namespace Project_Racegame
                 {
                     car2.wins = true;//player2 wins
                 }
-            }        
+            }*/        
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)

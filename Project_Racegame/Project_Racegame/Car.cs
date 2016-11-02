@@ -25,6 +25,7 @@ namespace Project_Racegame
         public bool checkpoint3 = false;
         public int ronde = 0;
         public bool finish = false;
+        public bool wins = false;
         public int player;
 
         public int spritenumber = 0;
@@ -64,7 +65,7 @@ namespace Project_Racegame
 
         public void ColorCollision(Bitmap colorMap, Label label, Label labelspeed, Label labelpitstop)
         {
-            Point anchor = new Point((int)carTransform.position.posX + ((int)carTransform.size.width / 4), (int)carTransform.position.posY + ((int)carTransform.size.height / 3));
+            Point anchor = new Point((int)carTransform.position.posX + ((int)carTransform.size.width / 3), (int)carTransform.position.posY + ((int)(carTransform.size.height * 1.2f)));
             Color pixel = colorMap.GetPixel(anchor.X, anchor.Y);
             label.Text = "RONDE:" + ronde;
             labelspeed.Text = "SNELHEID:" + speed;

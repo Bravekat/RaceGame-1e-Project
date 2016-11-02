@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.Start = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -42,6 +44,7 @@
             this.player2right = new System.Windows.Forms.Button();
             this.trackleft = new System.Windows.Forms.Button();
             this.trackright = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -175,6 +178,13 @@
             this.trackright.Text = ">";
             this.trackright.UseVisualStyleBackColor = true;
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "stop.png");
+            this.imageList1.Images.SetKeyName(1, "1.png");
+            // 
             // Menu
             // 
             this.ClientSize = new System.Drawing.Size(1006, 721);
@@ -217,5 +227,6 @@
         private System.Windows.Forms.Button player2right;
         private System.Windows.Forms.Button trackleft;
         private System.Windows.Forms.Button trackright;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

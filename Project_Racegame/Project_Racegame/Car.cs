@@ -25,6 +25,7 @@ namespace Project_Racegame
         public bool checkpoint3 = false;
         public int ronde = 0;
         public bool finish = false;
+        public bool wins = false;
         public int player;
 
         public int spritenumber = 0;
@@ -78,7 +79,7 @@ namespace Project_Racegame
             {
                 carTransform.position.posX += 25;
             }
-            if (pixel.ToArgb() == -15260459) //blauwerand-boven
+            if (pixel.ToArgb() == -15392057 || pixel.ToArgb() == -15687917) //blauwerand-boven
             {
                 carTransform.position.posY += 25;
             }

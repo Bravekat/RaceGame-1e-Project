@@ -19,7 +19,7 @@ namespace Project_Racegame
         public Form1()
         {
             InitializeComponent();
-            BackgroundImage = Properties.Resources.Ztracks2;
+            BackgroundImage = Properties.Resources.Ztracks2_colormap;
             colorMap = Properties.Resources.Ztracks2_colormap;
             car1 = new Car(1, 30, 500, 32, 46);
             car2 = new Car(2, 70, 500, 32, 46);
@@ -27,6 +27,19 @@ namespace Project_Racegame
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+            if(car1.wins == true || car2.wins == true)
+            {
+                if (car1.wins == true)
+                {
+                    Image p1wins = Properties.Resources.Zombie1Wins;
+                    e.Graphics.DrawImage(p1wins, 100, 300, 824, 104);
+                }
+                if (car2.wins == true)
+                {
+                    Image p2wins = Properties.Resources.Zombie2Wins;
+                    e.Graphics.DrawImage(p2wins, 100, 300, 824, 104);
+                }
+            }         
             imageList1.Draw(e.Graphics, new Point((int)car1.carTransform.position.posX, (int)car1.carTransform.position.posY), car1.spritenumber);
             imageList1.Draw(e.Graphics, new Point((int)car2.carTransform.position.posX, (int)car2.carTransform.position.posY), car2.spritenumber);
         }
@@ -146,11 +159,11 @@ namespace Project_Racegame
             {
                 if (car1.ronde == 3)
                 {
-                    // player1 wins
+                    car1.wins = true;//player1 wins
                 }
                 if (car2.ronde == 3)
                 {
-                    //player2 wins
+                    car2.wins = true;//player2 wins
                 }
             }        
         }

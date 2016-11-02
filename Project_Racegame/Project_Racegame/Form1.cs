@@ -144,6 +144,17 @@ namespace Project_Racegame
                 {
                     car2.speed = 1;
                 }
+            }
+            if (car1.ronde == 3 || car2.ronde == 3)
+            {
+                if (car1.ronde == 3)
+                {
+                    // player1 wins
+                }
+                if (car2.ronde == 3)
+                {
+                    //player2 wins
+                }
             }        
         }
 

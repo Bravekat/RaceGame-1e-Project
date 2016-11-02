@@ -273,6 +273,7 @@ namespace Project_Racegame
             // 
             // Form1
             // 
+
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -288,8 +289,7 @@ namespace Project_Racegame
 
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximumSize = new System.Drawing.Size(1042, 768);
-            this.MinimumSize = new System.Drawing.Size(1042, 726);
+            this.MaximumSize = new System.Drawing.Size(1024, 768);
             this.Name = "Form1";
             this.Text = "Racegame";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);

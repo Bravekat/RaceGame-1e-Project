@@ -40,7 +40,32 @@ namespace Project_Racegame
                     Image p2wins = Properties.Resources.Zombie2Wins;
                     e.Graphics.DrawImage(p2wins, 100, 300, 824, 104);
                 }
-            }         
+            }
+            // snelheid p1
+            Image voeten = Properties.Resources.voetjes;
+            if (car1.speed == 4)
+            {
+                e.Graphics.DrawImage(voeten, 150, 600, 65, 49);
+                e.Graphics.DrawImage(voeten, 215, 600, 65, 49);
+                e.Graphics.DrawImage(voeten, 280, 600, 65, 49);
+                e.Graphics.DrawImage(voeten, 345, 600, 65, 49);
+            }
+            if (car1.speed == 3)
+            {
+                e.Graphics.DrawImage(voeten, 150, 600, 65, 49);
+                e.Graphics.DrawImage(voeten, 215, 600, 65, 49);
+                e.Graphics.DrawImage(voeten, 280, 600, 65, 49);
+            }
+            if (car1.speed == 2)
+            {
+                e.Graphics.DrawImage(voeten, 150, 600, 65, 49);
+                e.Graphics.DrawImage(voeten, 215, 600, 65, 49);
+            }
+            if (car1.speed == 1)
+            {
+                e.Graphics.DrawImage(voeten, 150, 600, 65, 49);
+            }
+            
             imageList1.Draw(e.Graphics, new Point((int)car1.carTransform.position.posX, (int)car1.carTransform.position.posY), car1.spritenumber);
             imageList1.Draw(e.Graphics, new Point((int)car2.carTransform.position.posX, (int)car2.carTransform.position.posY), car2.spritenumber);
         }
@@ -56,10 +81,19 @@ namespace Project_Racegame
             this.label1.Text = "ENERGIE p1: " + Math.Round(car1.energie) + "%";
             this.label2.Text = "ENERGIE p2: " + Math.Round(car2.energie) + "%";
 
+            if (car1.down == false && car1.up == false)
+            {
+                car1.snelheid = 0;
+            }
+            if (car2.down == false && car2.up == false)
+            {
+                car2.snelheid = 0;
+            }
+
             if (car1.up == true)
             {
                 car1.carTransform.Move(car1.movespeedforward);
-                car1.speed = car1.movespeedforward;
+                car1.snelheid = car1.movespeedforward;
                 if (car1.right == true)
                 {
                     car1.carTransform.Move(car1.movespeedup, car1.rotatespeed);
@@ -72,7 +106,7 @@ namespace Project_Racegame
             if(car1.down == true)
             {
                 car1.carTransform.Move(-car1.movespeedbackward);
-                car1.speed = car1.movespeedbackward;
+                car1.snelheid = car1.movespeedbackward;
                 if (car1.right == true)
                 {
                     car1.carTransform.Move(-car1.movespeeddown, -car1.rotatespeed);
@@ -86,7 +120,7 @@ namespace Project_Racegame
             if (car2.up == true)
             {
                 car2.carTransform.Move(car2.movespeedforward);
-                car2.speed = car2.movespeedforward;
+                car2.snelheid = car2.movespeedforward;
                 if (car2.right == true)
                 {
                     car2.carTransform.Move(car2.movespeedup, car2.rotatespeed);
@@ -99,7 +133,7 @@ namespace Project_Racegame
             if (car2.down == true)
             {
                 car2.carTransform.Move(-car2.movespeedbackward);
-                car2.speed = car2.movespeedbackward;
+                car2.snelheid = car2.movespeedbackward;
                 if (car2.right == true)
                 {
                     car2.carTransform.Move(-car2.movespeeddown, -car2.rotatespeed);
@@ -212,6 +246,7 @@ namespace Project_Racegame
                     car2.speed = 1;
                 }
             }
+
             if (car1.ronde == 3 || car2.ronde == 3)
             {
                 if (car1.ronde == 3)
@@ -221,9 +256,8 @@ namespace Project_Racegame
                 if (car2.ronde == 3)
                 {
                     car2.wins = true;//player2 wins
-                }
-            }*/        
-        }
+                }*/
+            }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {

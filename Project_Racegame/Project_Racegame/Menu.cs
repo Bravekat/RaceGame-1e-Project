@@ -12,6 +12,9 @@ namespace Project_Racegame
 {
     public partial class Menu : Form
     {
+        
+        public bool[] zombie = {false, false, false, false, false, false, false, false};
+        public bool[] map = {false, false, false, false, false, false, false, false};
         public Menu()
         {
             InitializeComponent();
@@ -28,6 +31,11 @@ namespace Project_Racegame
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

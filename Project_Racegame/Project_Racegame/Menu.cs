@@ -15,9 +15,10 @@ namespace Project_Racegame
         
         public bool[] zombie = {false, false, false, false, false, false, false, false};
         public bool[] map = {false, false, false, false, false, false, false, false};
+        //imageList1.Images[  ];
         public Menu()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void Start_Click(object sender, EventArgs e)
@@ -26,7 +27,7 @@ namespace Project_Racegame
             form.Location = this.Location;
             form.StartPosition = FormStartPosition.Manual;
             form.FormClosing += delegate { this.Show(); };
-            form.Show();
+            form.Show();            
             this.Hide();
         }
 

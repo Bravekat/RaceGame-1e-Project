@@ -12,20 +12,17 @@ namespace Project_Racegame
 {
     public partial class Form1 : System.Windows.Forms.Form
     {
-        Bitmap Backbuffer;
         Bitmap colorMap;
-        Bitmap player1 = Properties.Resources.Zombie_animation_1_1;
-        Bitmap player2 = Properties.Resources.Zombie_animation_1_1;
         Car car1;
         Car car2;
 
         public Form1()
         {
             InitializeComponent();
-            BackgroundImage = Properties.Resources.Ztracks2_colormap;
+            BackgroundImage = Properties.Resources.Ztracks2;
             colorMap = Properties.Resources.Ztracks2_colormap;
-            car1 = new Car(1, 30, 500, player1);
-            car2 = new Car(2, 70, 500, player2);
+            car1 = new Car(1, 30, 500, 32, 46);
+            car2 = new Car(2, 70, 500, 32, 46);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)

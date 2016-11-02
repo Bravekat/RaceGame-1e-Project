@@ -22,7 +22,7 @@ namespace Project_Racegame.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Project_Racegame.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Project_Racegame.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Project_Racegame.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,17 +63,7 @@ namespace Project_Racegame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Zombie_1_0_animation {
-            get {
-                object obj = ResourceManager.GetObject("Zombie_1_0_animation", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Zombie_animation_1_1 {
+        public static System.Drawing.Bitmap Zombie_animation_1_1 {
             get {
                 object obj = ResourceManager.GetObject("Zombie_animation_1_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,117 +73,7 @@ namespace Project_Racegame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Zombie_animation_1_10 {
-            get {
-                object obj = ResourceManager.GetObject("Zombie_animation_1_10", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Zombie_animation_1_11 {
-            get {
-                object obj = ResourceManager.GetObject("Zombie_animation_1_11", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Zombie_animation_1_12 {
-            get {
-                object obj = ResourceManager.GetObject("Zombie_animation_1_12", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Zombie_animation_1_2 {
-            get {
-                object obj = ResourceManager.GetObject("Zombie_animation_1_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Zombie_animation_1_3 {
-            get {
-                object obj = ResourceManager.GetObject("Zombie_animation_1_3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Zombie_animation_1_4 {
-            get {
-                object obj = ResourceManager.GetObject("Zombie_animation_1_4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Zombie_animation_1_5 {
-            get {
-                object obj = ResourceManager.GetObject("Zombie_animation_1_5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Zombie_animation_1_6 {
-            get {
-                object obj = ResourceManager.GetObject("Zombie_animation_1_6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Zombie_animation_1_7 {
-            get {
-                object obj = ResourceManager.GetObject("Zombie_animation_1_7", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Zombie_animation_1_8 {
-            get {
-                object obj = ResourceManager.GetObject("Zombie_animation_1_8", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Zombie_animation_1_9 {
-            get {
-                object obj = ResourceManager.GetObject("Zombie_animation_1_9", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Ztracks1 {
+        public static System.Drawing.Bitmap Ztracks1 {
             get {
                 object obj = ResourceManager.GetObject("Ztracks1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -203,7 +83,7 @@ namespace Project_Racegame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ztracks1_colormap {
+        public static System.Drawing.Bitmap Ztracks1_colormap {
             get {
                 object obj = ResourceManager.GetObject("Ztracks1_colormap", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -213,7 +93,7 @@ namespace Project_Racegame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ztracks2 {
+        public static System.Drawing.Bitmap Ztracks2 {
             get {
                 object obj = ResourceManager.GetObject("Ztracks2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -223,7 +103,7 @@ namespace Project_Racegame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ztracks2_colormap {
+        public static System.Drawing.Bitmap Ztracks2_colormap {
             get {
                 object obj = ResourceManager.GetObject("Ztracks2_colormap", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

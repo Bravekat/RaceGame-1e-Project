@@ -18,9 +18,9 @@ namespace Project_Racegame
         public Image[] images = { Properties.Resources.stop, Properties.Resources.Zombie1Wins };
         int imagecounter = 0;        
         public Menu()
-        {
-          // pictureBox1.Image = images[imagecounter];
-            InitializeComponent();            
+        {         
+            InitializeComponent();
+            pictureBox1.Image = images[imagecounter];
         }
 
         private void Start_Click(object sender, EventArgs e)
@@ -49,6 +49,7 @@ namespace Project_Racegame
             
             imagecounter++; 
             if (imagecounter > 7) { imagecounter = 0; }
+            pictureBox1.Image = images[imagecounter];
         }
     }
 }

@@ -125,18 +125,6 @@
     <None Include="Resources\Zombie2Wins.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Ztracks1_colormap.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Ztracks1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Ztracks2_colormap.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Ztracks2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Zombie1Wins.png" />
   </ItemGroup>
   <ItemGroup>
@@ -153,13 +141,76 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\stop.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\voetjes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.1.0 animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.2.0-animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.3.0-animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.4.0-animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.5.0 animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.6.0 animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.7.0 animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.8.0 animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voetjes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ztracks1_colormap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ztracks2_colormap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ztracks1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ztracks2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fuel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.1.0 animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.2.0-animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.3.0-animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.4.0-animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.5.0 animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.6.0 animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.7.0 animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.8.0 animation.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -19,9 +19,15 @@ namespace Project_Racegame
         {
             InitializeComponent();
         }
+
         private void Start_Click(object sender, EventArgs e)
         {
-
+            Form1 form = new Form1();
+            form.Location = this.Location;
+            form.StartPosition = FormStartPosition.Manual;
+            form.FormClosing += delegate { this.Show(); };
+            form.Show();
+            this.Hide();
         }
 
         private void Exit_Click(object sender, EventArgs e)

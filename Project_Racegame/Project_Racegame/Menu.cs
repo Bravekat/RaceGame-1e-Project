@@ -16,11 +16,10 @@ namespace Project_Racegame
         public bool[] zombie = {false, false, false, false, false, false, false, false};
         public bool[] map = {false, false, false, false, false, false, false, false};
         public Image[] images = { Properties.Resources.stop, Properties.Resources.Zombie1Wins };
-        int imagecounter = 0;
-        //imageList1.Images[  ];
+        int imagecounter = 0;        
         public Menu()
         {
-            pictureBox1.Image = images[imagecounter];
+           //pictureBox1.Image = images[imagecounter];
             InitializeComponent();            
         }
 
@@ -47,7 +46,8 @@ namespace Project_Racegame
 
         private void player1right_Click(object sender, EventArgs e)
         {
-            imagecounter += 1;
+            
+            imagecounter++; 
             if (imagecounter > 7) { imagecounter = 0; }
         }
     }

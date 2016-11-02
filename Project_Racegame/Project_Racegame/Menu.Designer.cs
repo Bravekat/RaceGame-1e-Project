@@ -75,6 +75,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(416, 262);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(158, 120);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
@@ -89,9 +90,11 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Location = new System.Drawing.Point(681, 179);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(158, 120);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
@@ -100,7 +103,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(143, 150);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 17);
+            this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Player1";
             // 
@@ -109,7 +112,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(681, 150);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 17);
+            this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Player2";
             // 
@@ -118,7 +121,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(413, 242);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 17);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Track";
             // 
@@ -150,6 +153,7 @@
             this.player2left.TabIndex = 10;
             this.player2left.Text = "<";
             this.player2left.UseVisualStyleBackColor = true;
+            this.player2left.Click += new System.EventHandler(this.player2left_Click);
             // 
             // player2right
             // 
@@ -159,6 +163,7 @@
             this.player2right.TabIndex = 11;
             this.player2right.Text = ">";
             this.player2right.UseVisualStyleBackColor = true;
+            this.player2right.Click += new System.EventHandler(this.player2right_Click);
             // 
             // trackleft
             // 
@@ -168,6 +173,7 @@
             this.trackleft.TabIndex = 12;
             this.trackleft.Text = "<";
             this.trackleft.UseVisualStyleBackColor = true;
+            this.trackleft.Click += new System.EventHandler(this.trackleft_Click);
             // 
             // trackright
             // 
@@ -177,6 +183,7 @@
             this.trackright.TabIndex = 13;
             this.trackright.Text = ">";
             this.trackright.UseVisualStyleBackColor = true;
+            this.trackright.Click += new System.EventHandler(this.trackright_Click);
             // 
             // imageList1
             // 

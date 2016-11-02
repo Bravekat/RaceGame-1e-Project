@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.Start = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -37,12 +36,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.player1left = new System.Windows.Forms.Button();
+            this.player1right = new System.Windows.Forms.Button();
+            this.player2left = new System.Windows.Forms.Button();
+            this.player2right = new System.Windows.Forms.Button();
+            this.trackleft = new System.Windows.Forms.Button();
+            this.trackright = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -78,10 +77,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::Project_Racegame.Properties.Resources._1;
             this.pictureBox1.Location = new System.Drawing.Point(146, 179);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -120,69 +120,71 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Track";
             // 
-            // button4
+            // player1left
             // 
-            this.button4.Location = new System.Drawing.Point(100, 222);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(40, 37);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "<";
-            this.button4.UseVisualStyleBackColor = true;
+            this.player1left.Location = new System.Drawing.Point(100, 222);
+            this.player1left.Name = "player1left";
+            this.player1left.Size = new System.Drawing.Size(40, 37);
+            this.player1left.TabIndex = 8;
+            this.player1left.Text = "<";
+            this.player1left.UseVisualStyleBackColor = true;
+            this.player1left.Click += new System.EventHandler(this.player1left_Click);
             // 
-            // button5
+            // player1right
             // 
-            this.button5.Location = new System.Drawing.Point(310, 222);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(40, 37);
-            this.button5.TabIndex = 9;
-            this.button5.Text = ">";
-            this.button5.UseVisualStyleBackColor = true;
+            this.player1right.Location = new System.Drawing.Point(310, 222);
+            this.player1right.Name = "player1right";
+            this.player1right.Size = new System.Drawing.Size(40, 37);
+            this.player1right.TabIndex = 9;
+            this.player1right.Text = ">";
+            this.player1right.UseVisualStyleBackColor = true;
+            this.player1right.Click += new System.EventHandler(this.player1right_Click);
             // 
-            // button6
+            // player2left
             // 
-            this.button6.Location = new System.Drawing.Point(635, 222);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(40, 37);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "<";
-            this.button6.UseVisualStyleBackColor = true;
+            this.player2left.Location = new System.Drawing.Point(635, 222);
+            this.player2left.Name = "player2left";
+            this.player2left.Size = new System.Drawing.Size(40, 37);
+            this.player2left.TabIndex = 10;
+            this.player2left.Text = "<";
+            this.player2left.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // player2right
             // 
-            this.button7.Location = new System.Drawing.Point(845, 222);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(40, 37);
-            this.button7.TabIndex = 11;
-            this.button7.Text = ">";
-            this.button7.UseVisualStyleBackColor = true;
+            this.player2right.Location = new System.Drawing.Point(845, 222);
+            this.player2right.Name = "player2right";
+            this.player2right.Size = new System.Drawing.Size(40, 37);
+            this.player2right.TabIndex = 11;
+            this.player2right.Text = ">";
+            this.player2right.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // trackleft
             // 
-            this.button8.Location = new System.Drawing.Point(370, 299);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(40, 37);
-            this.button8.TabIndex = 12;
-            this.button8.Text = "<";
-            this.button8.UseVisualStyleBackColor = true;
+            this.trackleft.Location = new System.Drawing.Point(370, 299);
+            this.trackleft.Name = "trackleft";
+            this.trackleft.Size = new System.Drawing.Size(40, 37);
+            this.trackleft.TabIndex = 12;
+            this.trackleft.Text = "<";
+            this.trackleft.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // trackright
             // 
-            this.button9.Location = new System.Drawing.Point(580, 299);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(40, 37);
-            this.button9.TabIndex = 13;
-            this.button9.Text = ">";
-            this.button9.UseVisualStyleBackColor = true;
+            this.trackright.Location = new System.Drawing.Point(580, 299);
+            this.trackright.Name = "trackright";
+            this.trackright.Size = new System.Drawing.Size(40, 37);
+            this.trackright.TabIndex = 13;
+            this.trackright.Text = ">";
+            this.trackright.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
             this.ClientSize = new System.Drawing.Size(1006, 721);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.trackright);
+            this.Controls.Add(this.trackleft);
+            this.Controls.Add(this.player2right);
+            this.Controls.Add(this.player2left);
+            this.Controls.Add(this.player1right);
+            this.Controls.Add(this.player1left);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -210,11 +212,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button player1left;
+        private System.Windows.Forms.Button player1right;
+        private System.Windows.Forms.Button player2left;
+        private System.Windows.Forms.Button player2right;
+        private System.Windows.Forms.Button trackleft;
+        private System.Windows.Forms.Button trackright;
     }
 }

@@ -28,5 +28,15 @@ namespace Project_Racegame
         {
             this.Close();
         }
+
+        private void player1left_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void player1right_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

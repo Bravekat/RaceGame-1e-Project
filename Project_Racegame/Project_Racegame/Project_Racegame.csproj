@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
-    <Compile Include="MapLoader.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,19 +92,25 @@
     <None Include="Moet Naar Bin-Debug\Zombie Players\Zombie.1.0 animation.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Ztracks1_colormap.png" />
+    <None Include="Resources\Zombie animation 1-1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Ztracks2_colormap.png" />
+    <None Include="Resources\Zombie1Wins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie2Wins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ztracks1_colormap.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ztracks1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Ztracks2.png" />
+    <None Include="Resources\Ztracks2_colormap.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Zombie animation 1-1.png" />
+    <None Include="Resources\Ztracks2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Zombie1Wins.png" />

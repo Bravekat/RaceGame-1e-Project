@@ -30,6 +30,19 @@ namespace Project_Racegame
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+            if(car1.wins == true || car2.wins == true)
+            {
+                if (car1.wins == true)
+                {
+                    Image p1wins = Image.FromFile("SampImag.jpg");
+                    e.Graphics.DrawImage(p1wins, 0, 0, 1000, 500);
+                }
+                if (car2.wins == true)
+                {
+                    Image p2wins = Image.FromFile("SampImag.jpg");
+                    e.Graphics.DrawImage(p2wins, 0, 0, 1000, 500);
+                }
+            }         
             imageList1.Draw(e.Graphics, new Point((int)car1.carTransform.position.posX, (int)car1.carTransform.position.posY), car1.spritenumber);
             imageList1.Draw(e.Graphics, new Point((int)car2.carTransform.position.posX, (int)car2.carTransform.position.posY), car2.spritenumber);
         }
@@ -149,11 +162,11 @@ namespace Project_Racegame
             {
                 if (car1.ronde == 3)
                 {
-                    // player1 wins
+                    car1.wins = true;//player1 wins
                 }
                 if (car2.ronde == 3)
                 {
-                    //player2 wins
+                    car2.wins = true;//player2 wins
                 }
             }        
         }

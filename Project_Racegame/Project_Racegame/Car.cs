@@ -25,6 +25,7 @@ namespace Project_Racegame
         public bool checkpoint3 = false;
         public int ronde = 0;
         public bool finish = false;
+        public bool wins = false;
         public int player;
 
         public int spritenumber = 0;

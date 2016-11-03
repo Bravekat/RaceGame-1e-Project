@@ -420,7 +420,7 @@ namespace Project_Racegame
             
             if (car1.ronde == 1 || car2.ronde == 3)
             {
-                if (car1.ronde == 1)
+                if (car1.ronde == 3)
                 {
                     car1.wins = true;//player1 wins
                 }

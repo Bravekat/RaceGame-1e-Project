@@ -28,8 +28,8 @@ namespace Project_Racegame
             pictureBox2.Image = images[ic2];
             pictureBox3.Image = tracks[ic3];
 
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.Creepy_Opening_Theme_Song_Scary_Music___Movie_Soun__1_);
-            player.Play();
+            //System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.Creepy_Opening_Theme_Song_Scary_Music___Movie_Soun__1_);
+            //player.Play();
         }
 
         private void Start_Click(object sender, EventArgs e)

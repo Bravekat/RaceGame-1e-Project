@@ -61,15 +61,6 @@ namespace Project_Racegame.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream Creepy_Opening_Theme_Song_Scary_Music___Movie_Soun__1_ {
-            get {
-                return ResourceManager.GetStream("Creepy_Opening_Theme_Song_Scary_Music___Movie_Soun__1_", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap Fuel {

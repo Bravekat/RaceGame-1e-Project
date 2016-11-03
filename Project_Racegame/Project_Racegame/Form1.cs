@@ -16,13 +16,23 @@ namespace Project_Racegame
         Car car1;
         Car car2;
 
-        public Form1()
+        public int playerList1 = 0;
+        public int playerList2 = 0;
+
+
+        Bitmap[] maps = new Bitmap[4] { Properties.Resources.Ztracks1, Properties.Resources.Ztracks2, Properties.Resources.Ztracks3, Properties.Resources.Ztracks4 };
+        Bitmap[] colorMaps = new Bitmap[4] { Properties.Resources.Ztracks1_colormap, Properties.Resources.Ztracks2_colormap, Properties.Resources.Ztracks3_colormap, Properties.Resources.Ztracks4_colormap };
+        int[,,] positions = new int[4, 2, 2] { { { 20, 250 }, { 60, 250 } }, { { 540, 210 }, { 580, 210 } }, { { 130, 270 }, { 170, 270 } }, { { 10, 370 }, { 50, 370 } } };
+
+        public Form1(int map, int player1, int player2)
         {
             InitializeComponent();
-            BackgroundImage = Properties.Resources.Ztracks3;
-            colorMap = Properties.Resources.Ztracks3_colormap;
-            car1 = new Car(1, 30, 500, 32, 46);
-            car2 = new Car(2, 70, 500, 32, 46);
+            BackgroundImage = maps[map];
+            colorMap = colorMaps[map];
+            car1 = new Car(1, positions[map, 0, 0], positions[map, 0, 1], 32, 46);
+            car2 = new Car(2, positions[map, 1, 0], positions[map, 1, 1], 32, 46);
+            playerList1 = player1;
+            playerList2 = player2;
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -252,8 +262,61 @@ namespace Project_Racegame
                 e.Graphics.DrawImage(Pitstops1, 280, 545, 12, 12);
             }
 
-            imageList1.Draw(e.Graphics, new Point((int)car1.carTransform.position.posX, (int)car1.carTransform.position.posY), car1.spritenumber);
-            imageList1.Draw(e.Graphics, new Point((int)car2.carTransform.position.posX, (int)car2.carTransform.position.posY), car2.spritenumber);
+            switch(playerList1)
+            {
+                case 0:
+                    imageList1.Draw(e.Graphics, new Point((int)car1.carTransform.position.posX, (int)car1.carTransform.position.posY), car1.spritenumber);
+                    break;
+                case 1:
+                    imageList2.Draw(e.Graphics, new Point((int)car1.carTransform.position.posX, (int)car1.carTransform.position.posY), car1.spritenumber);
+                    break;
+                case 2:
+                    imageList3.Draw(e.Graphics, new Point((int)car1.carTransform.position.posX, (int)car1.carTransform.position.posY), car1.spritenumber);
+                    break;
+                case 3:
+                    imageList4.Draw(e.Graphics, new Point((int)car1.carTransform.position.posX, (int)car1.carTransform.position.posY), car1.spritenumber);
+                    break;
+                case 4:
+                    imageList5.Draw(e.Graphics, new Point((int)car1.carTransform.position.posX, (int)car1.carTransform.position.posY), car1.spritenumber);
+                    break;
+                case 5:
+                    imageList6.Draw(e.Graphics, new Point((int)car1.carTransform.position.posX, (int)car1.carTransform.position.posY), car1.spritenumber);
+                    break;
+                case 6:
+                    imageList7.Draw(e.Graphics, new Point((int)car1.carTransform.position.posX, (int)car1.carTransform.position.posY), car1.spritenumber);
+                    break;
+                case 7:
+                    imageList8.Draw(e.Graphics, new Point((int)car1.carTransform.position.posX, (int)car1.carTransform.position.posY), car1.spritenumber);
+                    break;
+            }
+
+            switch (playerList2)
+            {
+                case 0:
+                    imageList1.Draw(e.Graphics, new Point((int)car2.carTransform.position.posX, (int)car2.carTransform.position.posY), car2.spritenumber);
+                    break;
+                case 1:
+                    imageList2.Draw(e.Graphics, new Point((int)car2.carTransform.position.posX, (int)car2.carTransform.position.posY), car2.spritenumber);
+                    break;
+                case 2:
+                    imageList3.Draw(e.Graphics, new Point((int)car2.carTransform.position.posX, (int)car2.carTransform.position.posY), car2.spritenumber);
+                    break;
+                case 3:
+                    imageList4.Draw(e.Graphics, new Point((int)car2.carTransform.position.posX, (int)car2.carTransform.position.posY), car2.spritenumber);
+                    break;
+                case 4:
+                    imageList5.Draw(e.Graphics, new Point((int)car2.carTransform.position.posX, (int)car2.carTransform.position.posY), car2.spritenumber);
+                    break;
+                case 5:
+                    imageList6.Draw(e.Graphics, new Point((int)car2.carTransform.position.posX, (int)car2.carTransform.position.posY), car2.spritenumber);
+                    break;
+                case 6:
+                    imageList7.Draw(e.Graphics, new Point((int)car2.carTransform.position.posX, (int)car2.carTransform.position.posY), car2.spritenumber);
+                    break;
+                case 7:
+                    imageList8.Draw(e.Graphics, new Point((int)car2.carTransform.position.posX, (int)car2.carTransform.position.posY), car2.spritenumber);
+                    break;
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)

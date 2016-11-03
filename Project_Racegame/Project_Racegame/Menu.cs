@@ -31,7 +31,7 @@ namespace Project_Racegame
 
         private void Start_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
+            Form1 form = new Form1(ic3, ic1, ic2);
             form.Location = this.Location;
             form.StartPosition = FormStartPosition.Manual;
             form.FormClosing += delegate { this.Show(); };

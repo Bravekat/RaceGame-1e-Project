@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 
+
 namespace Project_Racegame
 {
     public partial class Menu : Form
     {
-
         public bool[] zombie = { false, false, false, false, false, false, false, false };
         public bool[] map = { false, false, false, false, false, false, false, false };
         public Image[] images = { Properties.Resources.Zombie_1_0_animation, Properties.Resources.Zombie_2_0_animation, Properties.Resources.Zombie_3_0_animation, Properties.Resources.Zombie_4_0_animation, Properties.Resources.Zombie_5_0_animation, Properties.Resources.Zombie_6_0_animation, Properties.Resources.Zombie_7_0_animation, Properties.Resources.Zombie_8_0_animation };
@@ -27,6 +27,9 @@ namespace Project_Racegame
             pictureBox1.Image = images[ic1];
             pictureBox2.Image = images[ic2];
             pictureBox3.Image = tracks[ic3];
+
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"D:\School\Jaar_1\Periode_1\ProjectRacegame\RacegameOurs\Sounds\bgm\MainMenu_2.wav");
+            player.Play();
         }
 
         private void Start_Click(object sender, EventArgs e)

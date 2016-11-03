@@ -228,9 +228,6 @@
     <None Include="Resources\Ztracks3_colormap.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Ztracks4_colormap.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Ztracks3.png" />
   </ItemGroup>
   <ItemGroup>
@@ -253,6 +250,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MainMenu_3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ztracks4_colormap.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -254,6 +254,9 @@
   <ItemGroup>
     <None Include="Resources\Ztracks4_colormap.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Creepy_Opening_Theme_Song_Scary_Music_-_Movie_Soun %281%29.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

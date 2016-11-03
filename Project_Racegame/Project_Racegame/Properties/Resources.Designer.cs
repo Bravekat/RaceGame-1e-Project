@@ -61,6 +61,15 @@ namespace Project_Racegame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Creepy_Opening_Theme_Song_Scary_Music___Movie_Soun__1_ {
+            get {
+                return ResourceManager.GetStream("Creepy_Opening_Theme_Song_Scary_Music___Movie_Soun__1_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap Fuel {
@@ -87,15 +96,6 @@ namespace Project_Racegame.Properties {
             get {
                 object obj = ResourceManager.GetObject("Lightning", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream MainMenu_3 {
-            get {
-                return ResourceManager.GetStream("MainMenu_3", resourceCulture);
             }
         }
         

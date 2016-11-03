@@ -418,7 +418,7 @@ namespace Project_Racegame
 
             }
             
-            if (car1.ronde == 1 || car2.ronde == 3)
+            if (car1.ronde == 3 || car2.ronde == 3)
             {
                 if (car1.ronde == 3)
                 {

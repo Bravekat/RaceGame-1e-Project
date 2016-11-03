@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Project_Racegame
 {
@@ -16,7 +17,7 @@ namespace Project_Racegame
         public bool[] zombie = { false, false, false, false, false, false, false, false };
         public bool[] map = { false, false, false, false, false, false, false, false };
         public Image[] images = { Properties.Resources.Zombie_1_0_animation, Properties.Resources.Zombie_2_0_animation, Properties.Resources.Zombie_3_0_animation, Properties.Resources.Zombie_4_0_animation, Properties.Resources.Zombie_5_0_animation, Properties.Resources.Zombie_6_0_animation, Properties.Resources.Zombie_7_0_animation, Properties.Resources.Zombie_8_0_animation };
-        public Image[] tracks = { Properties.Resources.Ztracks1, Properties.Resources.Ztracks2, Properties.Resources.Ztracks1_colormap, Properties.Resources.Ztracks2_colormap };
+        public Image[] tracks = { Properties.Resources.MenuTracks1, Properties.Resources.MenuTracks2, Properties.Resources.MenuTracks3, Properties.Resources.MenuTracks4 };
         int ic1 = 0; // imagecounters
         int ic2 = 0;
         int ic3 = 0;

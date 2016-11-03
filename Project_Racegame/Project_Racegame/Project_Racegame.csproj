@@ -227,6 +227,30 @@
   <ItemGroup>
     <None Include="Resources\Lightning.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ztracks3_colormap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ztracks4_colormap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ztracks3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ztracks4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuTracks1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuTracks2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuTracks3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuTracks4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

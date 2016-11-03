@@ -19,8 +19,8 @@ namespace Project_Racegame
         public Form1()
         {
             InitializeComponent();
-            BackgroundImage = Properties.Resources.Ztracks1;
-            colorMap = Properties.Resources.Ztracks1_colormap;
+            BackgroundImage = Properties.Resources.Ztracks3;
+            colorMap = Properties.Resources.Ztracks3_colormap;
             car1 = new Car(1, 30, 500, 32, 46);
             car2 = new Car(2, 70, 500, 32, 46);
         }
@@ -180,20 +180,20 @@ namespace Project_Racegame
                 e.Graphics.DrawImage(energie2, 270, 505, 12, 12);
                 e.Graphics.DrawImage(energie2, 280, 505, 12, 12);
             }
-            if (car2.energie >= 60 && car1.energie <= 80)
+            if (car2.energie >= 60 && car2.energie <= 80)
             {
                 e.Graphics.DrawImage(energie2, 240, 505, 12, 12);
                 e.Graphics.DrawImage(energie2, 250, 505, 12, 12);
                 e.Graphics.DrawImage(energie2, 260, 505, 12, 12);
                 e.Graphics.DrawImage(energie2, 270, 505, 12, 12);
             }
-            if (car2.energie >= 40 && car1.energie <= 60)
+            if (car2.energie >= 40 && car2.energie <= 60)
             {
                 e.Graphics.DrawImage(energie2, 240, 505, 12, 12);
                 e.Graphics.DrawImage(energie2, 250, 505, 12, 12);
                 e.Graphics.DrawImage(energie2, 260, 505, 12, 12);
             }
-            if (car2.energie >= 20 && car1.energie <= 40)
+            if (car2.energie >= 20 && car2.energie <= 40)
             {
                 e.Graphics.DrawImage(energie2, 240, 505, 12, 12);
                 e.Graphics.DrawImage(energie2, 250, 505, 12, 12);

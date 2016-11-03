@@ -123,6 +123,46 @@ namespace Project_Racegame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap MenuTracks1 {
+            get {
+                object obj = ResourceManager.GetObject("MenuTracks1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap MenuTracks2 {
+            get {
+                object obj = ResourceManager.GetObject("MenuTracks2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap MenuTracks3 {
+            get {
+                object obj = ResourceManager.GetObject("MenuTracks3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap MenuTracks4 {
+            get {
+                object obj = ResourceManager.GetObject("MenuTracks4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap RightHand {
             get {
                 object obj = ResourceManager.GetObject("RightHand", resourceCulture);
@@ -296,6 +336,46 @@ namespace Project_Racegame.Properties {
         public static System.Drawing.Bitmap Ztracks2_colormap {
             get {
                 object obj = ResourceManager.GetObject("Ztracks2_colormap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Ztracks3 {
+            get {
+                object obj = ResourceManager.GetObject("Ztracks3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Ztracks3_colormap {
+            get {
+                object obj = ResourceManager.GetObject("Ztracks3_colormap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Ztracks4 {
+            get {
+                object obj = ResourceManager.GetObject("Ztracks4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Ztracks4_colormap {
+            get {
+                object obj = ResourceManager.GetObject("Ztracks4_colormap", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

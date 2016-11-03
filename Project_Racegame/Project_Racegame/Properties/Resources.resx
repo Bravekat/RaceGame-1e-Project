@@ -136,6 +136,18 @@
   <data name="MenuStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuStart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MenuTracks1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuTracks1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuTracks2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuTracks2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuTracks3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuTracks3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuTracks4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuTracks4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="RightHand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RightHand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -189,5 +201,17 @@
   </data>
   <data name="Ztracks2_colormap" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ztracks2_colormap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ztracks3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ztracks3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ztracks3_colormap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ztracks3_colormap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ztracks4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ztracks4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ztracks4_colormap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ztracks4_colormap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

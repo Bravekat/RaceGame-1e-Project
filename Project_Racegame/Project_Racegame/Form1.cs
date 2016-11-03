@@ -81,6 +81,7 @@ namespace Project_Racegame
             }
             // energie p1
             Image energie1 = Properties.Resources.Fuel;
+            Image empty1 = Properties.Resources.Empty;
             if (car1.energie >= 80)
             {
                 e.Graphics.DrawImage(energie1, 175, 505, 12, 12);
@@ -110,6 +111,10 @@ namespace Project_Racegame
             if (car1.energie <= 20)
             {
                 e.Graphics.DrawImage(energie1, 175, 505, 12, 12);
+            }
+            if (car1.energie <= 1)
+            {
+                e.Graphics.DrawImage(empty1, 175, 505, 12, 12);
             }
             // Ronde p1
             Image ronde1 = Properties.Resources.Ronde;
@@ -186,6 +191,7 @@ namespace Project_Racegame
             }
             // energie p2
             Image energie2 = Properties.Resources.Fuel;
+            Image empty2 = Properties.Resources.Empty;
             if (car2.energie >= 80)
             {
                 e.Graphics.DrawImage(energie2, 240, 505, 12, 12);
@@ -215,6 +221,10 @@ namespace Project_Racegame
             if (car2.energie <= 20)
             {
                 e.Graphics.DrawImage(energie2, 240, 505, 12, 12);
+            }
+            if (car2.energie <= 1)
+            {
+                e.Graphics.DrawImage(empty2, 240, 505, 12, 12);
             }
             // Ronde p2
             Image ronde2 = Properties.Resources.Ronde;

@@ -45,25 +45,25 @@ namespace Project_Racegame
             Image voeten1 = Properties.Resources.Voetjes;
             if (car1.speed == 4)
             {
-                e.Graphics.DrawImage(voeten1, 175, 520, 8, 8);
-                e.Graphics.DrawImage(voeten1, 185, 520, 8, 8);
-                e.Graphics.DrawImage(voeten1, 195, 520, 8, 8);
-                e.Graphics.DrawImage(voeten1, 205, 520, 8, 8);
+                e.Graphics.DrawImage(voeten1, 177, 520, 8, 8);
+                e.Graphics.DrawImage(voeten1, 187, 520, 8, 8);
+                e.Graphics.DrawImage(voeten1, 197, 520, 8, 8);
+                e.Graphics.DrawImage(voeten1, 207, 520, 8, 8);
             }
             if (car1.speed == 3)
             {
-                e.Graphics.DrawImage(voeten1, 200, 600, 12, 12);
-                e.Graphics.DrawImage(voeten1, 210, 600, 12, 12);
-                e.Graphics.DrawImage(voeten1, 220, 600, 12, 12);
+                e.Graphics.DrawImage(voeten1, 177, 520, 8, 8);
+                e.Graphics.DrawImage(voeten1, 187, 520, 8, 8);
+                e.Graphics.DrawImage(voeten1, 197, 520, 8, 8);
             }
             if (car1.speed == 2)
             {
-                e.Graphics.DrawImage(voeten1, 200, 600, 12, 12);
-                e.Graphics.DrawImage(voeten1, 210, 600, 12, 12);
+                e.Graphics.DrawImage(voeten1, 177, 520, 8, 8);
+                e.Graphics.DrawImage(voeten1, 187, 520, 8, 8);
             }
             if (car1.speed == 1)
             {
-                e.Graphics.DrawImage(voeten1, 200, 600, 12, 12);
+                e.Graphics.DrawImage(voeten1, 177, 520, 8, 8);
             }
             // energie p1
             Image energie1 = Properties.Resources.Fuel;
@@ -97,61 +97,159 @@ namespace Project_Racegame
             {
                 e.Graphics.DrawImage(energie1, 175, 505, 12, 12);
             }
+            // Ronde p1
+            Image ronde1 = Properties.Resources.Ronde;
+            if (car1.ronde == 1)
+            {
+                e.Graphics.DrawImage(ronde1, 175, 530, 12, 12);
+            }
+            if (car1.ronde == 2)
+            {
+                e.Graphics.DrawImage(ronde1, 175, 530, 12, 12);
+                e.Graphics.DrawImage(ronde1, 185, 530, 12, 12);
+            }
+            if (car1.ronde == 3)
+            {
+                e.Graphics.DrawImage(ronde1, 175, 530, 12, 12);
+                e.Graphics.DrawImage(ronde1, 185, 530, 12, 12);
+                e.Graphics.DrawImage(ronde1, 195, 530, 12, 12);
+            }
+            // Pitstops p1
+            Image Pitstops1 = Properties.Resources.Lightning;
+            if (car1.aantalpitstops == 1)
+            {
+                e.Graphics.DrawImage(Pitstops1, 175, 545, 12, 12);
+            }
+            if (car1.aantalpitstops == 2)
+            {
+                e.Graphics.DrawImage(Pitstops1, 175, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 185, 545, 12, 12);
+            }
+            if (car1.aantalpitstops == 3)
+            {
+                e.Graphics.DrawImage(Pitstops1, 175, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 185, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 195, 545, 12, 12);
+            }
+            if (car1.aantalpitstops == 4)
+            {
+                e.Graphics.DrawImage(Pitstops1, 175, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 185, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 195, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 205, 545, 12, 12);
+            }
+            if (car1.aantalpitstops == 5)
+            {
+                e.Graphics.DrawImage(Pitstops1, 175, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 185, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 195, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 205, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 215, 545, 12, 12);
+            }
             // snelheid p2
             Image voeten2 = Properties.Resources.Voetjes;
             if (car2.speed == 4)
             {
-                e.Graphics.DrawImage(voeten2, 240, 520, 8, 8);
-                e.Graphics.DrawImage(voeten2, 250, 520, 8, 8);
-                e.Graphics.DrawImage(voeten2, 260, 520, 8, 8);
-                e.Graphics.DrawImage(voeten2, 270, 520, 8, 8);
+                e.Graphics.DrawImage(voeten2, 242, 520, 8, 8);
+                e.Graphics.DrawImage(voeten2, 252, 520, 8, 8);
+                e.Graphics.DrawImage(voeten2, 262, 520, 8, 8);
+                e.Graphics.DrawImage(voeten2, 272, 520, 8, 8);
             }
             if (car2.speed == 3)
             {
-                e.Graphics.DrawImage(voeten2, 300, 600, 12, 12);
-                e.Graphics.DrawImage(voeten2, 310, 600, 12, 12);
-                e.Graphics.DrawImage(voeten2, 320, 600, 12, 12);
+                e.Graphics.DrawImage(voeten2, 242, 520, 8, 8);
+                e.Graphics.DrawImage(voeten2, 252, 520, 8, 8);
+                e.Graphics.DrawImage(voeten2, 262, 520, 8, 8);
             }
             if (car2.speed == 2)
             {
-                e.Graphics.DrawImage(voeten2, 300, 600, 12, 12);
-                e.Graphics.DrawImage(voeten2, 310, 600, 12, 12);
+                e.Graphics.DrawImage(voeten2, 242, 520, 8, 8);
+                e.Graphics.DrawImage(voeten2, 252, 520, 8, 8);
             }
             if (car2.speed == 1)
             {
-                e.Graphics.DrawImage(voeten2, 300, 600, 12, 12);
+                e.Graphics.DrawImage(voeten2, 242, 520, 8, 8);
             }
             // energie p2
             Image energie2 = Properties.Resources.Fuel;
-            if (car1.energie >= 80)
+            if (car2.energie >= 80)
             {
-                e.Graphics.DrawImage(energie2, 175, 505, 12, 12);
-                e.Graphics.DrawImage(energie2, 185, 505, 12, 12);
-                e.Graphics.DrawImage(energie2, 195, 505, 12, 12);
-                e.Graphics.DrawImage(energie2, 205, 505, 12, 12);
-                e.Graphics.DrawImage(energie2, 215, 505, 12, 12);
+                e.Graphics.DrawImage(energie2, 240, 505, 12, 12);
+                e.Graphics.DrawImage(energie2, 250, 505, 12, 12);
+                e.Graphics.DrawImage(energie2, 260, 505, 12, 12);
+                e.Graphics.DrawImage(energie2, 270, 505, 12, 12);
+                e.Graphics.DrawImage(energie2, 280, 505, 12, 12);
             }
-            if (car1.energie >= 60 && car1.energie <= 80)
+            if (car2.energie >= 60 && car1.energie <= 80)
             {
-                e.Graphics.DrawImage(energie2, 175, 505, 12, 12);
-                e.Graphics.DrawImage(energie2, 185, 505, 12, 12);
-                e.Graphics.DrawImage(energie2, 195, 505, 12, 12);
-                e.Graphics.DrawImage(energie2, 205, 505, 12, 12);
+                e.Graphics.DrawImage(energie2, 240, 505, 12, 12);
+                e.Graphics.DrawImage(energie2, 250, 505, 12, 12);
+                e.Graphics.DrawImage(energie2, 260, 505, 12, 12);
+                e.Graphics.DrawImage(energie2, 270, 505, 12, 12);
             }
-            if (car1.energie >= 40 && car1.energie <= 60)
+            if (car2.energie >= 40 && car1.energie <= 60)
             {
-                e.Graphics.DrawImage(energie2, 175, 505, 12, 12);
-                e.Graphics.DrawImage(energie2, 185, 505, 12, 12);
-                e.Graphics.DrawImage(energie2, 195, 505, 12, 12);
+                e.Graphics.DrawImage(energie2, 240, 505, 12, 12);
+                e.Graphics.DrawImage(energie2, 250, 505, 12, 12);
+                e.Graphics.DrawImage(energie2, 260, 505, 12, 12);
             }
-            if (car1.energie >= 20 && car1.energie <= 40)
+            if (car2.energie >= 20 && car1.energie <= 40)
             {
-                e.Graphics.DrawImage(energie2, 175, 505, 12, 12);
-                e.Graphics.DrawImage(energie2, 185, 505, 12, 12);
+                e.Graphics.DrawImage(energie2, 240, 505, 12, 12);
+                e.Graphics.DrawImage(energie2, 250, 505, 12, 12);
             }
-            if (car1.energie <= 20)
+            if (car2.energie <= 20)
             {
-                e.Graphics.DrawImage(energie2, 175, 505, 12, 12);
+                e.Graphics.DrawImage(energie2, 240, 505, 12, 12);
+            }
+            // Ronde p2
+            Image ronde2 = Properties.Resources.Ronde;
+            if (car2.ronde == 1)
+            {
+                e.Graphics.DrawImage(ronde2, 240, 530, 12, 12);
+            }
+            if (car2.ronde == 2)
+            {
+                e.Graphics.DrawImage(ronde2, 240, 530, 12, 12);
+                e.Graphics.DrawImage(ronde2, 250, 530, 12, 12);
+            }
+            if (car2.ronde == 3)
+            {
+                e.Graphics.DrawImage(ronde2, 240, 530, 12, 12);
+                e.Graphics.DrawImage(ronde2, 250, 530, 12, 12);
+                e.Graphics.DrawImage(ronde2, 260, 530, 12, 12);
+            }
+            // Pitstops p1
+            Image Pitstops2 = Properties.Resources.Lightning;
+            if (car2.aantalpitstops == 1)
+            {
+                e.Graphics.DrawImage(Pitstops1, 240, 545, 12, 12);
+            }
+            if (car2.aantalpitstops == 2)
+            {
+                e.Graphics.DrawImage(Pitstops1, 240, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 250, 545, 12, 12);
+            }
+            if (car2.aantalpitstops == 3)
+            {
+                e.Graphics.DrawImage(Pitstops1, 240, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 250, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 260, 545, 12, 12);
+            }
+            if (car2.aantalpitstops == 4)
+            {
+                e.Graphics.DrawImage(Pitstops1, 240, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 250, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 260, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 270, 545, 12, 12);
+            }
+            if (car2.aantalpitstops == 5)
+            {
+                e.Graphics.DrawImage(Pitstops1, 240, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 250, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 260, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 270, 545, 12, 12);
+                e.Graphics.DrawImage(Pitstops1, 280, 545, 12, 12);
             }
 
             imageList1.Draw(e.Graphics, new Point((int)car1.carTransform.position.posX, (int)car1.carTransform.position.posY), car1.spritenumber);

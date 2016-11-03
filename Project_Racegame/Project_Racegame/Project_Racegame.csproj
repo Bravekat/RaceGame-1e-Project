@@ -153,15 +153,6 @@
     <None Include="Resources\Zombie.1.0 animation.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Zombie.2.0-animation.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Zombie.3.0-animation.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Zombie.4.0-animation.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Zombie.5.0 animation.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +181,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fuel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.1.0-animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.2.0-animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.3.0-animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.4.0-animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.5.0-animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.6.0-animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.7.0-animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie.8.0-animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeftHand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightHand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuExit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuStart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ronde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lightning.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

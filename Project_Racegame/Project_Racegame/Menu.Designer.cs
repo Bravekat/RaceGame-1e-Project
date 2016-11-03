@@ -52,21 +52,23 @@
             // 
             // Start
             // 
+            this.Start.BackgroundImage = global::Project_Racegame.Properties.Resources.MenuBackground;
+            this.Start.Image = global::Project_Racegame.Properties.Resources.MenuStart;
             this.Start.Location = new System.Drawing.Point(416, 179);
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(158, 46);
             this.Start.TabIndex = 0;
-            this.Start.Text = "Start";
             this.Start.UseVisualStyleBackColor = true;
             this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
             // button3
             // 
+            this.button3.BackgroundImage = global::Project_Racegame.Properties.Resources.MenuBackground;
+            this.button3.Image = global::Project_Racegame.Properties.Resources.MenuExit;
             this.button3.Location = new System.Drawing.Point(416, 407);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(158, 46);
             this.button3.TabIndex = 1;
-            this.button3.Text = "Exit";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -101,87 +103,99 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(143, 150);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(60, 17);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Player1";
+            this.label1.Text = "Player 1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(681, 150);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Player2";
+            this.label2.Text = "Player 2";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(413, 242);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(51, 17);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Track";
+            this.label3.Text = "Tracks";
             // 
             // player1left
             // 
-            this.player1left.Location = new System.Drawing.Point(100, 222);
+            this.player1left.BackgroundImage = global::Project_Racegame.Properties.Resources.MenuBackground;
+            this.player1left.Image = global::Project_Racegame.Properties.Resources.LeftHand;
+            this.player1left.Location = new System.Drawing.Point(52, 216);
             this.player1left.Name = "player1left";
-            this.player1left.Size = new System.Drawing.Size(40, 37);
+            this.player1left.Size = new System.Drawing.Size(88, 49);
             this.player1left.TabIndex = 8;
-            this.player1left.Text = "<";
             this.player1left.UseVisualStyleBackColor = true;
             this.player1left.Click += new System.EventHandler(this.player1left_Click);
             // 
             // player1right
             // 
-            this.player1right.Location = new System.Drawing.Point(310, 222);
+            this.player1right.BackgroundImage = global::Project_Racegame.Properties.Resources.MenuBackground;
+            this.player1right.Image = global::Project_Racegame.Properties.Resources.RightHand;
+            this.player1right.Location = new System.Drawing.Point(310, 216);
             this.player1right.Name = "player1right";
-            this.player1right.Size = new System.Drawing.Size(40, 37);
+            this.player1right.Size = new System.Drawing.Size(88, 49);
             this.player1right.TabIndex = 9;
-            this.player1right.Text = ">";
             this.player1right.UseVisualStyleBackColor = true;
             this.player1right.Click += new System.EventHandler(this.player1right_Click);
             // 
             // player2left
             // 
-            this.player2left.Location = new System.Drawing.Point(635, 222);
+            this.player2left.BackgroundImage = global::Project_Racegame.Properties.Resources.MenuBackground;
+            this.player2left.Image = global::Project_Racegame.Properties.Resources.LeftHand;
+            this.player2left.Location = new System.Drawing.Point(587, 216);
             this.player2left.Name = "player2left";
-            this.player2left.Size = new System.Drawing.Size(40, 37);
+            this.player2left.Size = new System.Drawing.Size(88, 49);
             this.player2left.TabIndex = 10;
-            this.player2left.Text = "<";
             this.player2left.UseVisualStyleBackColor = true;
             this.player2left.Click += new System.EventHandler(this.player2left_Click);
             // 
             // player2right
             // 
-            this.player2right.Location = new System.Drawing.Point(845, 222);
+            this.player2right.BackgroundImage = global::Project_Racegame.Properties.Resources.MenuBackground;
+            this.player2right.Image = global::Project_Racegame.Properties.Resources.RightHand;
+            this.player2right.Location = new System.Drawing.Point(845, 216);
             this.player2right.Name = "player2right";
-            this.player2right.Size = new System.Drawing.Size(40, 37);
+            this.player2right.Size = new System.Drawing.Size(88, 49);
             this.player2right.TabIndex = 11;
-            this.player2right.Text = ">";
             this.player2right.UseVisualStyleBackColor = true;
             this.player2right.Click += new System.EventHandler(this.player2right_Click);
             // 
             // trackleft
             // 
-            this.trackleft.Location = new System.Drawing.Point(370, 299);
+            this.trackleft.BackgroundImage = global::Project_Racegame.Properties.Resources.MenuBackground;
+            this.trackleft.Image = global::Project_Racegame.Properties.Resources.LeftHand;
+            this.trackleft.Location = new System.Drawing.Point(322, 299);
             this.trackleft.Name = "trackleft";
-            this.trackleft.Size = new System.Drawing.Size(40, 37);
+            this.trackleft.Size = new System.Drawing.Size(88, 49);
             this.trackleft.TabIndex = 12;
-            this.trackleft.Text = "<";
             this.trackleft.UseVisualStyleBackColor = true;
             this.trackleft.Click += new System.EventHandler(this.trackleft_Click);
             // 
             // trackright
             // 
+            this.trackright.BackgroundImage = global::Project_Racegame.Properties.Resources.MenuBackground;
+            this.trackright.Image = global::Project_Racegame.Properties.Resources.RightHand;
             this.trackright.Location = new System.Drawing.Point(580, 299);
             this.trackright.Name = "trackright";
-            this.trackright.Size = new System.Drawing.Size(40, 37);
+            this.trackright.Size = new System.Drawing.Size(88, 49);
             this.trackright.TabIndex = 13;
-            this.trackright.Text = ">";
             this.trackright.UseVisualStyleBackColor = true;
             this.trackright.Click += new System.EventHandler(this.trackright_Click);
             // 
@@ -194,6 +208,7 @@
             // 
             // Menu
             // 
+            this.BackgroundImage = global::Project_Racegame.Properties.Resources.MenuBackground;
             this.ClientSize = new System.Drawing.Size(1006, 721);
             this.Controls.Add(this.trackright);
             this.Controls.Add(this.trackleft);
@@ -209,6 +224,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.Start);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

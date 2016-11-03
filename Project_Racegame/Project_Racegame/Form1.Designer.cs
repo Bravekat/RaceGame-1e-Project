@@ -66,7 +66,7 @@ namespace Project_Racegame
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(539, 490);
+            this.label2.Location = new System.Drawing.Point(1, 735);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 17);
             this.label2.TabIndex = 1;
@@ -92,7 +92,7 @@ namespace Project_Racegame
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(184, 551);
+            this.label3.Location = new System.Drawing.Point(-4, 730);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 2;
@@ -101,7 +101,7 @@ namespace Project_Racegame
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(539, 551);
+            this.label4.Location = new System.Drawing.Point(12, 733);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 3;
@@ -110,7 +110,7 @@ namespace Project_Racegame
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(539, 518);
+            this.label6.Location = new System.Drawing.Point(12, 734);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 17);
             this.label6.TabIndex = 5;
@@ -119,7 +119,7 @@ namespace Project_Racegame
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(184, 584);
+            this.label7.Location = new System.Drawing.Point(0, 734);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 17);
             this.label7.TabIndex = 6;
@@ -128,7 +128,7 @@ namespace Project_Racegame
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(539, 584);
+            this.label8.Location = new System.Drawing.Point(12, 735);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 17);
             this.label8.TabIndex = 7;

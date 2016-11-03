@@ -44,11 +44,23 @@ namespace Project_Racegame
                 {
                     Image p1wins = Properties.Resources.Zombie1Wins;
                     e.Graphics.DrawImage(p1wins, 100, 300, 824, 104);
+                    int i = 0;
+                    while (i <= 2000000)
+                    {
+                        i++;
+                    }
+                    Application.Exit();
                 }
                 if (car2.wins == true)
                 {
                     Image p2wins = Properties.Resources.Zombie2Wins;
                     e.Graphics.DrawImage(p2wins, 100, 300, 824, 104);
+                    int i = 0;
+                    while (i <= 20000)
+                    {
+                        i++;
+                    }
+                    Application.Exit();
                 }
             }
             // snelheid p1
@@ -406,9 +418,9 @@ namespace Project_Racegame
 
             }
             
-            if (car1.ronde == 3 || car2.ronde == 3)
+            if (car1.ronde == 1 || car2.ronde == 3)
             {
-                if (car1.ronde == 3)
+                if (car1.ronde == 1)
                 {
                     car1.wins = true;//player1 wins
                 }

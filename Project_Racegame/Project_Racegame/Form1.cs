@@ -19,6 +19,8 @@ namespace Project_Racegame
         public int playerList1 = 0;
         public int playerList2 = 0;
 
+        public bool playerwin = false;
+
 
         Bitmap[] maps = new Bitmap[4] { Properties.Resources.Ztracks1, Properties.Resources.Ztracks2, Properties.Resources.Ztracks3, Properties.Resources.Ztracks4 };
         Bitmap[] colorMaps = new Bitmap[4] { Properties.Resources.Ztracks1_colormap, Properties.Resources.Ztracks2_colormap, Properties.Resources.Ztracks3_colormap, Properties.Resources.Ztracks4_colormap };
@@ -44,23 +46,13 @@ namespace Project_Racegame
                 {
                     Image p1wins = Properties.Resources.Zombie1Wins;
                     e.Graphics.DrawImage(p1wins, 100, 300, 824, 104);
-                    int i = 0;
-                    while (i <= 2000000)
-                    {
-                        i++;
-                    }
-                    Application.Exit();
+                    playerwin = true;
                 }
                 if (car2.wins == true)
                 {
                     Image p2wins = Properties.Resources.Zombie2Wins;
                     e.Graphics.DrawImage(p2wins, 100, 300, 824, 104);
-                    int i = 0;
-                    while (i <= 20000)
-                    {
-                        i++;
-                    }
-                    Application.Exit();
+                    playerwin = true;
                 }
             }
             // snelheid p1
@@ -331,8 +323,16 @@ namespace Project_Racegame
             }
         }
 
+        public int wincounter = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if (playerwin == true)
+            {
+                wincounter++;
+                if (wincounter > 20)
+                    Application.Exit();
+            }
+
             car1.ColorCollision(colorMap, label3, label5, label7);
             car2.ColorCollision(colorMap, label4, label6, label8);
 

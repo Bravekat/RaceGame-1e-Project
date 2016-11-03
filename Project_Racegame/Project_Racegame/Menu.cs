@@ -28,7 +28,7 @@ namespace Project_Racegame
             pictureBox2.Image = images[ic2];
             pictureBox3.Image = tracks[ic3];
 
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"D:\School\Jaar_1\Periode_1\ProjectRacegame\RacegameOurs\Sounds\bgm\MainMenu_2.wav");
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.MainMenu_3);
             player.Play();
         }
 

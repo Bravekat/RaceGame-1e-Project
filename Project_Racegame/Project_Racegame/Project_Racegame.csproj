@@ -225,9 +225,6 @@
     <None Include="Resources\Ronde.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Lightning.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Ztracks3_colormap.png" />
   </ItemGroup>
   <ItemGroup>
@@ -250,6 +247,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MenuTracks4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lightning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainMenu_3.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
